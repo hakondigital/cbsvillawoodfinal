@@ -2,13 +2,15 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { PRIMARY_STORE, SECONDARY_STORE } from '@/lib/utils'
 
-const BRAND_LOGOS = [
+// Order per client (Nov 2026): MAC Render takes Euromix's old slot and runs larger; Astec Wallmaster added.
+const BRAND_LOGOS: { src: string; alt: string; width: number; height?: number }[] = [
   { src: '/images/ACE.webp', alt: 'ACE', width: 80 },
-  { src: '/images/Euromix.webp', alt: 'Euromix', width: 100 },
+  { src: '/images/Mac-Render.webp', alt: 'Melbacrylic', width: 90, height: 50 },
   { src: '/images/FINALLOGONOVATEX.webp', alt: 'Novatex', width: 120 },
-  { src: '/images/Mac-Render.webp', alt: 'Melbacrylic', width: 90 },
+  { src: '/images/Euromix.webp', alt: 'Euromix', width: 100 },
   { src: '/images/unitex-logo.svg', alt: 'Unitex', width: 100 },
   { src: '/images/builders-emporium-logo.svg', alt: 'Builders Emporium', width: 120 },
+  { src: '/images/astec-wallmaster-logo.webp', alt: 'Astec Wallmaster', width: 130 },
 ]
 
 export default function Footer() {
@@ -22,7 +24,7 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-6 md:gap-10 flex-wrap">
             {BRAND_LOGOS.map((l) => (
-              <div key={l.alt} className="relative flex-shrink-0" style={{ height: 30, width: l.width }}>
+              <div key={l.alt} className="relative flex-shrink-0" style={{ height: l.height ?? 30, width: l.width }}>
                 <Image src={l.src} alt={l.alt} fill className="object-contain" sizes="120px" />
               </div>
             ))}

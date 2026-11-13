@@ -46,3 +46,6 @@ _api-disabled/
 
 # Raw client photos dropped in for conversion; the optimised .webp copies are what ships
 public/images/WhatsApp Image*
+
+# Locked Next build caches set aside during OneDrive sync glitches; safe to delete
+/.next-stale*/
