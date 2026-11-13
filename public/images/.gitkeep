@@ -1,0 +1,21 @@
+This directory holds CBS website images.
+
+Expected structure:
+/public/images/
+  hero-construction.jpg       ← Home page hero (Joseph to provide)
+  og-image.jpg                ← OG / social share image (1200×630px)
+  /brands/
+    ace-logo.png              ← ACE Polystyrene logo
+    euromix-logo.png          ← Euromix logo
+    novatex-logo.png          ← Novatex logo
+    melbacrylic-logo.png      ← Melbacrylic logo
+    trademark-logo.png        ← TradeMark Wholesale logo
+  /store/
+    villawood-front.jpg       ← CBS Villawood store exterior
+    villawood-interior.jpg    ← CBS Villawood store interior / racking
+    prestons-front.jpg        ← CBS Prestons store exterior
+  /about/
+    warehouse.jpg             ← Warehouse interior / product racking
+    foam-stack.jpg            ← ACE foam panels stacked
+    render-display.jpg        ← Render products display
+    team.jpg                  ← Team photo (optional)

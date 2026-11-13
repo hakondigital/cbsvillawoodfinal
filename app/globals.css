@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cbs-brand: #014BAD;
+  --ink: #1a1a18;
+  --body-text: #444444;
+  --warm-dark: #2a2520;
+  --terracotta: #b5705a;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: auto; }
+
+body {
+  margin: 0;
+  background-color: #ffffff;
+  color: var(--body-text);
+  font-family: var(--font-barlow), 'Barlow', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+html.lenis { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+::selection { background-color: var(--cbs-brand); color: #fff; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-barlow-condensed), 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0;
+}
+
+h1 { font-size: clamp(32px, 8vw, 96px); }
+h2 { font-size: clamp(28px, 5vw, 64px); }
+h3 { font-size: clamp(20px, 3vw, 40px); }
+
+p, li, a, span, label, input, textarea, select {
+  font-family: var(--font-barlow), 'Barlow', sans-serif;
+}
+
+.container-site {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width: 640px) {
+  .container-site { padding-left: 24px; padding-right: 24px; }
+}
+@media (min-width: 1024px) {
+  .container-site { padding-left: 40px; padding-right: 40px; }
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #fff; }
+::-webkit-scrollbar-thumb { background: var(--ink); }
+
+@layer components {
+  .btn-brand {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    background-color: var(--cbs-brand); color: #fff;
+    padding: 12px 24px; border-radius: 50px;
+    font-family: var(--font-barlow), sans-serif; font-weight: 600; font-size: 14px;
+    letter-spacing: 0.06em; border: 2px solid var(--cbs-brand);
+    cursor: pointer; transition: opacity 0.2s; text-decoration: none;
+  }
+  .btn-brand:hover { opacity: 0.85; }
+
+  .btn-outline-white {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    background: transparent; color: #fff;
+    padding: 12px 24px; border-radius: 50px;
+    font-family: var(--font-barlow), sans-serif; font-weight: 600; font-size: 14px;
+    letter-spacing: 0.06em; border: 2px solid rgba(255,255,255,0.6);
+    cursor: pointer; transition: all 0.2s; text-decoration: none;
+  }
+  .btn-outline-white:hover { background: #fff; color: var(--ink); border-color: #fff; }
+
+  .btn-outline-dark {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    background: transparent; color: var(--ink);
+    padding: 12px 24px; border-radius: 50px;
+    font-family: var(--font-barlow), sans-serif; font-weight: 600; font-size: 14px;
+    letter-spacing: 0.06em; border: 2px solid var(--ink);
+    cursor: pointer; transition: all 0.2s; text-decoration: none;
+  }
+  .btn-outline-dark:hover { background: var(--ink); color: #fff; }
+
+  .btn-dark {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    background-color: var(--ink); color: #fff;
+    padding: 12px 24px; border-radius: 50px;
+    font-family: var(--font-barlow), sans-serif; font-weight: 600; font-size: 14px;
+    letter-spacing: 0.06em; border: 2px solid var(--ink);
+    cursor: pointer; transition: opacity 0.2s; text-decoration: none;
+  }
+  .btn-dark:hover { opacity: 0.8; }
+
+  .btn-white {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    background-color: #fff; color: var(--ink);
+    padding: 12px 24px; border-radius: 50px;
+    font-family: var(--font-barlow), sans-serif; font-weight: 600; font-size: 14px;
+    letter-spacing: 0.06em; border: 2px solid #fff;
+    cursor: pointer; transition: opacity 0.2s; text-decoration: none;
+  }
+  .btn-white:hover { opacity: 0.85; }
+}
+
+@media (min-width: 640px) {
+  .btn-brand, .btn-outline-white, .btn-outline-dark, .btn-dark, .btn-white {
+    padding: 14px 32px;
+  }
+}
