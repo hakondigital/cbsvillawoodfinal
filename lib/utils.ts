@@ -127,8 +127,8 @@ export const CBS_STORE = {
     tagline: 'Our original store in Villawood, supplying Western Sydney’s renderers since the early 2000s.',
     address: '203 Woodville Rd, Villawood NSW 2163',
     phone: '(02) 9791 1188',
-    // No Villawood mobile on record (confirmed 2026-11-13). Leave blank and it is hidden everywhere.
-    mobile: '',
+    // Office mobile, confirmed by the client 2026-11-13 (also on the Woodville Rd street sign).
+    mobile: '0452 222 281',
     email: 'admin@centralbuildingsupplies.com.au',
     hours: {
       weekdays: '6:00 AM – 4:00 PM',

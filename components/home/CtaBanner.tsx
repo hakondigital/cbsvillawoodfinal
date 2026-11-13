@@ -3,9 +3,9 @@
 import { PRIMARY_STORE } from '@/lib/utils'
 
 export default function CtaBanner() {
-  // Lead with the mobile where the branch has one; otherwise the landline carries the banner on its own.
-  const lead = PRIMARY_STORE.mobile || PRIMARY_STORE.phone
-  const second = PRIMARY_STORE.mobile ? PRIMARY_STORE.phone : ''
+  // Landline leads; the office mobile sits under it when the branch has one.
+  const lead = PRIMARY_STORE.phone
+  const second = PRIMARY_STORE.mobile
 
   return (
     <section className="bg-cbs text-center text-white py-10 md:py-14 px-4">

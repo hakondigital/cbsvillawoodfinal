@@ -72,8 +72,8 @@ export default function Footer() {
               <div key={s.name} className="mb-3" style={{ fontSize: 13, lineHeight: 2 }}>
                 <p style={{ color: '#f5f2ee' }} className="font-body font-semibold">{s.name}</p>
                 <p>{s.address}</p>
-                {s.mobile && <a href={`tel:${s.mobile}`} className="hover:text-white transition-colors block">{s.mobile}</a>}
                 <a href={`tel:${s.phone}`} className="hover:text-white transition-colors block">{s.phone}</a>
+                {s.mobile && <a href={`tel:${s.mobile}`} className="hover:text-white transition-colors block">{s.mobile}</a>}
               </div>
             ))}
           </div>

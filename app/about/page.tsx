@@ -282,8 +282,8 @@ export default function AboutPage() {
               <h3 className="text-ink mb-3" style={{ fontSize: 'clamp(22px, 3vw, 28px)', fontWeight: 700 }}>{PRIMARY_STORE.name}</h3>
               <div style={{ fontSize: 15, lineHeight: 2, color: '#666' }}>
                 <p>{PRIMARY_STORE.address}</p>
-                {PRIMARY_STORE.mobile && <p><a href={`tel:${PRIMARY_STORE.mobile}`} className="text-ink font-semibold">{PRIMARY_STORE.mobile}</a> (mobile)</p>}
                 <p><a href={`tel:${PRIMARY_STORE.phone}`} className="text-ink font-semibold">{PRIMARY_STORE.phone}</a>{PRIMARY_STORE.mobile ? ' (landline)' : ''}</p>
+                {PRIMARY_STORE.mobile && <p><a href={`tel:${PRIMARY_STORE.mobile}`} className="text-ink font-semibold">{PRIMARY_STORE.mobile}</a> (mobile)</p>}
                 <p>{PRIMARY_STORE.email}</p>
                 <p>Mon&ndash;Fri {PRIMARY_STORE.hours.weekdays}</p>
                 <p>Sat {PRIMARY_STORE.hours.saturday}</p>

@@ -24,8 +24,8 @@ export default function StorePreview() {
             <h3 className="text-ink mb-3" style={{ fontSize: 'clamp(22px, 3vw, 32px)', fontWeight: 700 }}>{p.name}</h3>
             <div style={{ fontSize: 'clamp(13px, 1.2vw, 15px)', lineHeight: 2, color: '#666' }}>
               <p>{p.address}</p>
-              {p.mobile && <p><a href={`tel:${p.mobile}`} className="text-ink font-semibold">{p.mobile}</a> (mobile)</p>}
               <p><a href={`tel:${p.phone}`} className="text-ink font-semibold">{p.phone}</a>{p.mobile ? ' (landline)' : ''}</p>
+              {p.mobile && <p><a href={`tel:${p.mobile}`} className="text-ink font-semibold">{p.mobile}</a> (mobile)</p>}
               <p>Mon&ndash;Fri {p.hours.weekdays}</p>
               <p>Sat {p.hours.saturday}</p>
             </div>

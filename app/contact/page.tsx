@@ -89,8 +89,8 @@ export default function ContactPage() {
                 <h3 className="text-ink mb-3" style={{ fontSize: 24, fontWeight: 700 }}>{s.name}</h3>
                 <div style={{ fontSize: 15, lineHeight: 2, color: '#666' }}>
                   <p>{s.address}</p>
-                  {s.mobile && <p><a href={`tel:${s.mobile}`} className="text-ink font-semibold">{s.mobile}</a> (mobile)</p>}
                   <p><a href={`tel:${s.phone}`} className="text-ink font-semibold">{s.phone}</a>{s.mobile ? ' (landline)' : ''}</p>
+                  {s.mobile && <p><a href={`tel:${s.mobile}`} className="text-ink font-semibold">{s.mobile}</a> (mobile)</p>}
                   <p>{s.email}</p>
                   <p>Mon&ndash;Fri {s.hours.weekdays}</p>
                   <p>Sat {s.hours.saturday}</p>
