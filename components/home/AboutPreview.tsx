@@ -15,7 +15,7 @@ export default function AboutPreview() {
               <Image src={medium(PRIMARY_STORE_PHOTO)} alt="CBS Villawood store" fill className="object-cover" sizes="(max-width: 1024px) 50vw, 25vw" />
             </div>
             <div className="relative overflow-hidden" style={{ height: 'clamp(140px, 25vw, 320px)' }}>
-              <Image src={medium('/images/23a7777e-5c66-48ee-9d1d-f93619e7f1c5.webp')} alt="Render stock on shelving" fill className="object-cover" sizes="(max-width: 1024px) 50vw, 25vw" />
+              <Image src={medium('/images/villawood-street-sign.webp')} alt="CBS Villawood street sign on Woodville Road" fill className="object-cover" sizes="(max-width: 1024px) 50vw, 25vw" />
             </div>
           </div>
 

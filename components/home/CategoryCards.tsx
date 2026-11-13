@@ -5,17 +5,17 @@ import Image from 'next/image'
 import { medium, thumb } from '@/lib/utils'
 
 const CATS = [
-  { label: 'Foam Panels', image: '/images/ace-grey-foam-panels-gallery.webp', href: '/products?category=Foam' },
-  { label: 'Render Systems', image: '/images/23a7777e-5c66-48ee-9d1d-f93619e7f1c5.webp', href: '/products?category=Render' },
+  { label: 'Foam Panels', image: '/images/villawood-foam-racking.webp', href: '/products?category=Foam' },
+  { label: 'Render Systems', image: '/images/villawood-render-pallets.webp', href: '/products?category=Render' },
   { label: 'Texture Coatings', image: '/images/7fd79032-3cfc-4476-b6c3-bd837ad8c159.webp', href: '/products?category=Texture' },
   { label: 'Mouldings', image: '/images/edges.webp', href: '/products?category=Mouldings' },
   { label: 'Paint', image: '/images/BBC5B34C-D7A2-4F57-908E-DA4DA477DD11.webp', href: '/products?category=Paint' },
   { label: 'Tiling', image: '/images/products/novatex-e-lite-white.webp', href: '/products?category=Tiling' },
   { label: 'Waterproofing', image: '/images/products/mac-wpm440.webp', href: '/products?category=Waterproofing' },
-  { label: 'Angles', image: '/images/products/be-acrylic-render-pre-meshed-angle-4mm-mesh.webp', href: '/products?category=Angles' },
-  { label: 'Mesh', image: '/images/0C448B52-4AFF-49AC-8174-764A73588C59.webp', href: '/products?category=Mesh' },
-  { label: 'Tools', image: '/images/B8D7F79F-C2F8-4930-9811-F3407C6F1D3D.webp', href: '/products?category=Tools' },
-  { label: 'Accessories', image: '/images/0422F1F0-C754-460B-BB0B-CC1A407C924B.webp', href: '/products?category=Accessories' },
+  { label: 'Angles', image: '/images/villawood-mesh-angles.webp', href: '/products?category=Angles' },
+  { label: 'Mesh', image: '/images/villawood-mesh-rack.webp', href: '/products?category=Mesh' },
+  { label: 'Tools', image: '/images/villawood-mixers-paddles.webp', href: '/products?category=Tools' },
+  { label: 'Accessories', image: '/images/villawood-fixings-shelving.webp', href: '/products?category=Accessories' },
 ]
 
 // Desktop: 11 tiles as a 6 + 5 layout. Mobile: 3-across on a 6-column grid, last two tiles widen to fill the final row.

@@ -11,18 +11,17 @@ const SLIDES = [
     sub: 'Factory-direct ACE polystyrene foam, plus Euromix, Novatex, Melbacrylic & Unitex render systems. Two locations.',
   },
   {
-    // TODO(client): swap for a Villawood photo — 742b88a9 is the Prestons building, so it is not used here.
-    image: '/images/23a7777e-5c66-48ee-9d1d-f93619e7f1c5.webp',
+    image: '/images/cbs-villawood-sign.webp',
     heading: 'Villawood — Where CBS Began',
     sub: 'Our original store at 203 Woodville Rd, Villawood. Supplying the trade since the early 2000s. Open 6am Monday to Saturday.',
   },
   {
-    image: '/images/85fecf2c-dc61-4182-81b1-19f1c2450807.webp',
+    image: '/images/villawood-render-pallets.webp',
     heading: 'Backed by Australia\u2019s Most Trusted Render Brands',
     sub: 'We distribute the render systems that professional renderers specify. Full range in stock.',
   },
   {
-    image: '/images/ace-panels-installed.webp', // real ACE panel install, from the old CBS site
+    image: '/images/villawood-foam-cube.webp',
     heading: 'ACE Polystyrene \u2014 Factory-Direct Foam',
     sub: 'Graphite EPS foam panels, mouldings, and sun hoods \u2014 factory-direct pricing from ACE Polystyrene.',
   },

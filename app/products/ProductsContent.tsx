@@ -169,6 +169,7 @@ export default function ProductsContent() {
 }
 
 const TOOLS_GALLERY: { src: string; label: string; wide?: boolean }[] = [
+  { src: '/images/villawood-mixers-paddles.webp', label: 'Mixing Paddles & Power Mixers' },
   { src: '/images/B8D7F79F-C2F8-4930-9811-F3407C6F1D3D.webp', label: 'Trowels & Floats' },
   { src: '/images/9FE9E2AE-97E6-457D-93BE-4A5AFA4F9E09.webp', label: 'Rendering Trowels' },
   { src: '/images/36D25167-EFEF-4B0C-AAEB-065AF7D68884.webp', label: 'Notched Trowels & Floats' },
@@ -182,8 +183,8 @@ const TOOLS_GALLERY: { src: string; label: string; wide?: boolean }[] = [
 ]
 
 const ACCESSORIES_GALLERY: { src: string; label: string; wide?: boolean }[] = [
-  { src: '/images/0422F1F0-C754-460B-BB0B-CC1A407C924B.webp', label: 'Screws, Washers & Fixings' },
-  { src: '/images/0C448B52-4AFF-49AC-8174-764A73588C59.webp', label: 'Render Mesh & Sarking' },
+  { src: '/images/villawood-fixings-shelving.webp', label: 'Screws, Washers & Fixings' },
+  { src: '/images/villawood-mesh-angles.webp', label: 'Render Mesh & Angles' },
   { src: '/images/edges.webp', label: 'Mouldings Sample Board' },
   { src: '/images/BBC5B34C-D7A2-4F57-908E-DA4DA477DD11.webp', label: 'Primers, Tape & Supplies' },
   { src: '/images/b7301bc9-c877-4ef3-ad72-220e85df522d.webp', label: 'Hawks & Rendering Tools' },

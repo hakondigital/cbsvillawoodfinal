@@ -5,10 +5,10 @@ import Image from 'next/image'
 import { medium } from '@/lib/utils'
 
 const BRANDS = [
-  { name: 'ACE Polystyrene', logo: '/images/ACE.webp', logoBg: '', image: '/images/6940f3ab-d6f9-4c69-b162-f026cb9cf7a1.webp', copy: 'Graphite EPS foam panels in every thickness from 10mm to 600mm \u2014 CodeMark certified, BAL-29 rated. Sun hoods, architectural mouldings, expanding foam. Factory-direct pricing, custom sizing to order.', href: '/brands#ace' },
+  { name: 'ACE Polystyrene', logo: '/images/ACE.webp', logoBg: '', image: '/images/villawood-foam-stacks.webp', copy: 'Graphite EPS foam panels in every thickness from 10mm to 600mm \u2014 CodeMark certified, BAL-29 rated. Sun hoods, architectural mouldings, expanding foam. Factory-direct pricing, custom sizing to order.', href: '/brands#ace' },
   { name: 'Euromix', logo: '/images/Euromix.webp', logoBg: '', image: '/images/ae359aba-d3d6-4e65-a119-cae00fdff431.webp', copy: 'Australian-made in Strathfield South. Premium acrylic-modified cement renders, skim coats, and plasters formulated with specially blended mineral fillers for superior crack resistance and workability. CBS distributes the full Euromix system.', href: '/brands#euromix' },
   { name: 'Novatex', logo: '/images/FINALLOGONOVATEX.webp', logoBg: '', image: '/images/23a7777e-5c66-48ee-9d1d-f93619e7f1c5.webp', copy: 'Over 70 years in the Australian building industry. Based in Wetherill Park, Novatex manufactures the EZ101 and ER100 render lines, SPR Acrylic polymer render, texture coatings, and the Ezytex skim range.', href: '/brands#novatex' },
-  { name: 'Melbacrylic', logo: '/images/Mac-Render.webp', logoBg: '', image: '/images/7fd79032-3cfc-4476-b6c3-bd837ad8c159.webp', copy: 'Specialist cement and acrylic renders backed by a 7-year manufacturer\u2019s warranty. Macrender HBS for EPS, Coarse FR for AAC, and Supaskim finishing render. Their selector system matches the right product to every substrate.', href: '/brands#melbacrylic' },
+  { name: 'Melbacrylic', logo: '/images/Mac-Render.webp', logoBg: '', image: '/images/villawood-macbond-additives.webp', copy: 'Specialist cement and acrylic renders backed by a 7-year manufacturer\u2019s warranty. Macrender HBS for EPS, Coarse FR for AAC, and Supaskim finishing render. Their selector system matches the right product to every substrate.', href: '/brands#melbacrylic' },
 ]
 
 export default function BrandStrip() {

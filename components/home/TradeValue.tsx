@@ -35,7 +35,7 @@ export default function TradeValue() {
           </div>
         </div>
 
-        <div className="relative min-h-[250px] md:min-h-[350px] lg:min-h-0 bg-cover bg-center" style={{ backgroundImage: 'url(/images/85fecf2c-dc61-4182-81b1-19f1c2450807.webp)' }} />
+        <div className="relative min-h-[250px] md:min-h-[350px] lg:min-h-0 bg-cover bg-center" style={{ backgroundImage: 'url(/images/villawood-foam-cube.webp)' }} />
       </div>
     </section>
   )

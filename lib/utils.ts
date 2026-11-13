@@ -167,11 +167,10 @@ export const SECONDARY_STORE = CBS_STORE.prestons
 
 /**
  * Photo of the primary store, used in the hero, about page and store sections.
- * Currently the Villawood shop sign (from the Feb 2026 exemplar build; same blue CBS mark as the logo).
- * TODO(client): swap for a proper Villawood storefront shot when supplied: drop the file in public/images,
- * run `node scripts/make-medium.js .` so medium() has an 800px copy, then change this one path.
+ * The Villawood shop entrance, supplied by the client 2026-11-13. To change it, drop the new file in
+ * public/images, run `node scripts/make-medium.js .` so medium() has an 800px copy, then change this one path.
  */
-export const PRIMARY_STORE_PHOTO = '/images/cbs-villawood-sign.webp'
+export const PRIMARY_STORE_PHOTO = '/images/villawood-storefront.webp'
 
 /** Placeholder stats — update with real numbers from Joseph */
 export const CBS_STATS = [

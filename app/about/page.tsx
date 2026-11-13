@@ -48,7 +48,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative overflow-hidden" style={{ height: 480 }}>
-              <Image src="/images/6940f3ab-d6f9-4c69-b162-f026cb9cf7a1.webp" alt="CBS warehouse racking" fill className="object-cover" />
+              <Image src="/images/villawood-street-sign.webp" alt="CBS Villawood street sign on Woodville Road" fill className="object-cover" />
             </div>
           </div>
         </div>
@@ -61,10 +61,10 @@ export default function AboutPage() {
             {/* Photos */}
             <div className="grid grid-cols-2 gap-2">
               <div className="relative overflow-hidden" style={{ height: 300 }}>
-                <Image src="/images/6940f3ab-d6f9-4c69-b162-f026cb9cf7a1.webp" alt="ACE factory warehouse racking" fill className="object-cover" />
+                <Image src="/images/villawood-foam-cube.webp" alt="ACE foam panels stacked in the Villawood warehouse" fill className="object-cover" />
               </div>
               <div className="relative overflow-hidden" style={{ height: 300 }}>
-                <Image src="/images/23a7777e-5c66-48ee-9d1d-f93619e7f1c5.webp" alt="Render bags on shelving" fill className="object-cover" />
+                <Image src="/images/villawood-foam-stacks.webp" alt="ACE foam panel stacks" fill className="object-cover" />
               </div>
             </div>
 
@@ -117,12 +117,12 @@ export default function AboutPage() {
               {
                 title: 'Foam Panels & Insulation',
                 desc: 'Graphite EPS panels in all thicknesses (10mm\u2013600mm), sun hoods, landscaping blocks, and expanding foam. Factory-direct from ACE Polystyrene.',
-                image: '/images/6940f3ab-d6f9-4c69-b162-f026cb9cf7a1.webp',
+                image: '/images/villawood-foam-racking.webp',
               },
               {
                 title: 'Render Systems',
                 desc: 'Full render systems from Euromix, Novatex, Melbacrylic, and Unitex. Base coats, skim coats, polymer renders, texture coatings, primers, and admixtures.',
-                image: '/images/23a7777e-5c66-48ee-9d1d-f93619e7f1c5.webp',
+                image: '/images/villawood-render-pallets.webp',
               },
               {
                 title: 'Architectural Mouldings',
@@ -137,12 +137,12 @@ export default function AboutPage() {
               {
                 title: 'Rendering Tools',
                 desc: 'Professional-grade stainless trowels, sponge and plastic floats, aluminium hawks, mixing paddles, corner beads, and scratchers.',
-                image: '/images/a7735e5d-9e1b-40a4-8462-5057567cc6db.webp',
+                image: '/images/villawood-mixers-paddles.webp',
               },
               {
                 title: 'Accessories & Fixings',
                 desc: 'Fibreglass render mesh, panel fixings, mushroom washers, bond admixtures, sarking, sealants, and everything else for a compliant installation.',
-                image: '/images/aae48f01-4072-4c17-97fd-d65329611b85.webp',
+                image: '/images/villawood-fixings-shelving.webp',
               },
             ].map((item) => (
               <div key={item.title}>
@@ -254,10 +254,10 @@ export default function AboutPage() {
       {/* Gallery */}
       <div className="grid grid-cols-2 lg:grid-cols-4" style={{ gap: 0 }}>
         {[
-          { src: '/images/ae359aba-d3d6-4e65-a119-cae00fdff431.webp', l: 'Euromix Render' },
-          { src: '/images/7fd79032-3cfc-4476-b6c3-bd837ad8c159.webp', l: 'Melbacrylic' },
-          { src: '/images/aae48f01-4072-4c17-97fd-d65329611b85.webp', l: 'Mesh & Accessories' },
-          { src: '/images/a7735e5d-9e1b-40a4-8462-5057567cc6db.webp', l: 'Tools' },
+          { src: '/images/villawood-macbond-additives.webp', l: 'Melbacrylic' },
+          { src: '/images/villawood-mesh-angles.webp', l: 'Mesh & Angles' },
+          { src: '/images/villawood-mesh-rack.webp', l: 'Render Mesh' },
+          { src: '/images/ace-panels-installed.webp', l: 'ACE Panels On Site' },
         ].map((i) => (
           <div key={i.l} className="relative overflow-hidden" style={{ height: 240 }}>
             <Image src={i.src} alt={i.l} fill className="object-cover" />

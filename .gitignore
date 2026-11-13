@@ -43,3 +43,6 @@ Thumbs.db
 out/
 *.bak
 _api-disabled/
+
+# Raw client photos dropped in for conversion; the optimised .webp copies are what ships
+public/images/WhatsApp Image*
