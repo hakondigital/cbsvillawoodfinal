@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { medium } from '@/lib/utils'
 
 const BRANDS = [
-  { name: 'ACE Polystyrene', logo: '/images/ace-logo-orange.webp', logoBg: '', image: '/images/villawood-foam-stacks.webp', copy: 'Graphite EPS foam panels in every thickness from 10mm to 600mm \u2014 CodeMark certified, BAL-29 rated. Architectural mouldings, landscaping blocks, expanding foam. Factory-direct pricing, custom sizing to order.', href: '/brands#ace' },
+  { name: 'ACE Polystyrene', logo: '/images/ace-logo-orange.webp', logoBg: '', logoH: 96, image: '/images/villawood-foam-stacks.webp', copy: 'Graphite EPS foam panels in every thickness from 10mm to 600mm \u2014 CodeMark certified, BAL-29 rated. Architectural mouldings, landscaping blocks, expanding foam. Factory-direct pricing, custom sizing to order.', href: '/brands#ace' },
   { name: 'Euromix', logo: '/images/Euromix.webp', logoBg: '', image: '/images/ae359aba-d3d6-4e65-a119-cae00fdff431.webp', copy: 'Australian-made in Strathfield South. Premium acrylic-modified cement renders, skim coats, and plasters formulated with specially blended mineral fillers for superior crack resistance and workability. CBS distributes the full Euromix system.', href: '/brands#euromix' },
   { name: 'Novatex', logo: '/images/FINALLOGONOVATEX.webp', logoBg: '', image: '/images/23a7777e-5c66-48ee-9d1d-f93619e7f1c5.webp', copy: 'Over 70 years in the Australian building industry. Based in Wetherill Park, Novatex manufactures the EZ101 and ER100 render lines, SPR Acrylic polymer render, texture coatings, and the Ezytex skim range.', href: '/brands#novatex' },
   { name: 'Melbacrylic', logo: '/images/Mac-Render.webp', logoBg: '', image: '/images/villawood-macbond-additives.webp', copy: 'Specialist cement and acrylic renders backed by a 7-year manufacturer\u2019s warranty. Macrender HBS for EPS, Coarse FR for AAC, and Supaskim finishing render. Their selector system matches the right product to every substrate.', href: '/brands#melbacrylic' },
@@ -34,7 +34,7 @@ export default function BrandStrip() {
                   <Image src={medium(brand.image)} alt={brand.name} fill className="object-cover" sizes="50vw" />
                 </div>
                 <div className={i % 2 === 1 ? 'order-1 pr-10' : 'pl-10'}>
-                  <div className={`relative mb-4 overflow-hidden ${brand.logoBg}`} style={{ height: 60, width: 240 }}>
+                  <div className={`relative mb-4 overflow-hidden ${brand.logoBg}`} style={{ height: brand.logoH ?? 60, width: 240 }}>
                     <Image src={brand.logo} alt={`${brand.name} logo`} fill className="object-contain object-left p-1" sizes="240px" />
                   </div>
                   <h3 className="text-ink mb-3" style={{ fontSize: 40, fontWeight: 800 }}>{brand.name}</h3>
@@ -45,7 +45,7 @@ export default function BrandStrip() {
 
               {/* Mobile: text below image */}
               <div className="lg:hidden">
-                <div className={`relative mb-3 overflow-hidden ${brand.logoBg}`} style={{ height: 44, width: 'clamp(140px, 50vw, 200px)' }}>
+                <div className={`relative mb-3 overflow-hidden ${brand.logoBg}`} style={{ height: brand.logoH ? Math.round(brand.logoH * 0.7) : 44, width: 'clamp(140px, 50vw, 200px)' }}>
                   <Image src={brand.logo} alt={`${brand.name} logo`} fill className="object-contain object-left p-1" sizes="200px" />
                 </div>
                 <h3 className="text-ink mb-2" style={{ fontSize: 'clamp(22px, 5vw, 32px)', fontWeight: 800 }}>{brand.name}</h3>
