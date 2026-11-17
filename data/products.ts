@@ -76,15 +76,26 @@ const ACE_RESOURCES = [
   { name: 'Coating System Specifications', filePath: 'https://www.acepolystyrene.com.au/downloads/coating-system-specifications.html' },
 ]
 
-function acePanel(thickness: string, size: string, rValue: string, grooved = false): Product {
+type PanelVariant = 'standard' | 'grooved' | 'flexi'
+const PANEL_IMAGE: Record<PanelVariant, string> = {
+  standard: '/images/cbs-foam-panel.webp',
+  grooved: '/images/products/ace-grooved-foam-panel.webp',
+  // TODO(client): the "flexi panel" photo named in the 17 Nov email was not attached; standard panel image until it arrives.
+  flexi: '/images/cbs-foam-panel.webp',
+}
+
+function acePanel(thickness: string, size: string, rValue: string, variant: PanelVariant = 'standard'): Product {
   const sizeLabel = size === '2500' ? '2500 × 1200mm' : '5000 × 1200mm'
-  const slug = `ace-grey-foam${grooved ? '-grooved' : ''}-${thickness}-${size}`
+  const grooved = variant === 'grooved'
+  const flexi = variant === 'flexi'
+  const slug = `ace-grey-foam${variant === 'standard' ? '' : `-${variant}`}-${thickness}-${size}`
+  const label = grooved ? 'GROOVED ' : flexi ? 'FLEXI ' : ''
   return {
     id: slug,
-    name: `ACE Grey ${grooved ? 'GROOVED ' : ''}Foam Panel – ${thickness}mm × 1200 × ${size}mm`,
+    name: `ACE Grey ${label}Foam Panel – ${thickness}mm × 1200 × ${size}mm`,
     category: 'Foam',
     brand: 'ACE',
-    shortDescription: `M Grade fire retardant graphite-infused EPS ${grooved ? 'grooved ' : ''}foam panel. ${thickness}mm thickness, ${sizeLabel} sheet size. BAL-29 rated, CodeMark certified.`,
+    shortDescription: `M Grade fire retardant graphite-infused EPS ${grooved ? 'grooved ' : flexi ? 'flexible ' : ''}foam panel. ${thickness}mm thickness, ${sizeLabel} sheet size. BAL-29 rated, CodeMark certified.`,
     features: [
       `${thickness}mm thickness | R-Value ${rValue}`,
       `Sheet size: ${sizeLabel}`,
@@ -92,6 +103,7 @@ function acePanel(thickness: string, size: string, rValue: string, grooved = fal
       'BAL-29 fire rated (AS1530.8.1-2007)',
       'CodeMark certified',
       ...(grooved ? ['Grooved surface for enhanced render adhesion'] : []),
+      ...(flexi ? ['Suitable to wrap for curves'] : []),
       'Lightweight; no lifting equipment required',
     ],
     specs: [
@@ -100,13 +112,13 @@ function acePanel(thickness: string, size: string, rValue: string, grooved = fal
       { label: 'R-Value', value: rValue },
       { label: 'Density grade', value: 'M Grade' },
       { label: 'Fire rating', value: 'BAL-29 (AS1530.8.1-2007)' },
-      { label: 'Type', value: grooved ? 'Grooved' : 'Standard' },
+      { label: 'Type', value: grooved ? 'Grooved' : flexi ? 'Flexible' : 'Standard' },
     ],
     application: 'Residential and commercial wall cladding (EWI/EIFS), cool room insulation, ceiling and underfloor insulation.',
     badges: ['Factory Direct', 'CodeMark Certified'],
     externalLink: 'https://www.acepolystyrene.com.au/ace-grey-foam-panels.html',
-    featured: thickness === '75' && !grooved && size === '2500',
-    imagePath: '/images/cbs-foam-panel.webp',
+    featured: thickness === '75' && variant === 'standard' && size === '2500',
+    imagePath: PANEL_IMAGE[variant],
     resources: ACE_RESOURCES,
   }
 }
@@ -129,10 +141,14 @@ const foamProducts: Product[] = [
   acePanel('75', '5000', '3.60'),
   acePanel('100', '5000', '4.80'),
   // Grooved panels
-  acePanel('50', '2500', '2.40', true),
-  acePanel('75', '2500', '3.60', true),
-  acePanel('100', '2500', '4.80', true),
-  acePanel('75', '5000', '3.60', true),
+  acePanel('50', '2500', '2.40', 'grooved'),
+  acePanel('75', '2500', '3.60', 'grooved'),
+  acePanel('100', '2500', '4.80', 'grooved'),
+  acePanel('75', '5000', '3.60', 'grooved'),
+  // Flexi panels (added per client email, 17 Nov 2026)
+  acePanel('50', '2500', '2.40', 'flexi'),
+  acePanel('75', '2500', '3.60', 'flexi'),
+  acePanel('100', '2500', '4.80', 'flexi'),
   // Poly Battens
   {
     id: 'ace-poly-battens',
@@ -154,7 +170,7 @@ const foamProducts: Product[] = [
     application: 'Batten strips for EWI/EIFS cladding systems, creating cavity for drainage and ventilation.',
     badges: ['Factory Direct'],
     externalLink: 'https://www.acepolystyrene.com.au/ace-grey-foam-panels.html',
-    imagePath: '/images/cbs-foam-panel.webp',
+    imagePath: '/images/products/ace-poly-battens.webp',
   },
   // Custom foam
   {
@@ -173,26 +189,7 @@ const foamProducts: Product[] = [
     application: 'Custom insulation, architectural features, bespoke cladding panels, and specialist applications.',
     badges: ['Factory Direct', 'Custom Available'],
     externalLink: 'https://www.acepolystyrene.com.au/ace-grey-foam-panels.html',
-    imagePath: '/images/cbs-foam-panel.webp',
-  },
-  // Sun Hoods
-  {
-    id: 'ace-sun-hoods',
-    name: 'ACE Foam Sun Hoods',
-    category: 'Foam',
-    brand: 'ACE',
-    shortDescription: 'Lightweight polystyrene sun hoods manufactured from ACE Grey Foam. Enhance the architectural appearance of windows and doorways while providing shade and weather protection.',
-    features: [
-      'Manufactured from ACE Grey Foam',
-      'Compatible with any render texture and colour finish',
-      'Lightweight — easy to install without heavy lifting',
-      'Fast installation system',
-      'Custom sizes available',
-    ],
-    application: 'Architectural features over windows and doors in rendered EWI/EIFS cladding systems.',
-    badges: ['Factory Direct', 'Custom Available'],
-    externalLink: 'https://www.acepolystyrene.com.au/ace-grey-foam-panels/sun-hoods.html',
-    imagePath: '/images/cbs-foam-panel.webp',
+    imagePath: '/images/products/ace-custom-foam.webp',
   },
   // Landscaping Blocks
   {
@@ -211,7 +208,7 @@ const foamProducts: Product[] = [
     application: 'Landscaping void fill, raised garden beds, retaining wall backfill, under-slab void fill.',
     badges: ['Factory Direct'],
     externalLink: 'https://www.acepolystyrene.com.au/ace-grey-foam-panels/landscaping-blocks.html',
-    imagePath: '/images/cbs-foam-panel.webp',
+    imagePath: '/images/products/ace-landscaping-block.webp',
   },
   // Expanding Foam
   {
@@ -229,7 +226,7 @@ const foamProducts: Product[] = [
     ],
     application: 'Gap filling around window frames, penetrations, fixings, and panel joints.',
     badges: ['CBS Stocked'],
-    imagePath: '/images/cbs-foam-panel.webp',
+    imagePath: '/images/products/ace-expanding-foam.webp',
     externalLink: 'https://www.acepolystyrene.com.au/products.html',
   },
   // Waffle Pods
@@ -249,7 +246,7 @@ const foamProducts: Product[] = [
     application: 'Void former for waffle raft concrete slab foundations in residential and commercial construction.',
     badges: ['Factory Direct'],
     externalLink: 'https://www.acepolystyrene.com.au/ace-grey-foam-panels.html',
-    imagePath: '/images/cbs-foam-panel.webp',
+    imagePath: '/images/products/ace-waffle-pod.webp',
   },
 ]
 

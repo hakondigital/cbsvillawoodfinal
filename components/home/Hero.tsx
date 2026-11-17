@@ -23,7 +23,7 @@ const SLIDES = [
   {
     image: '/images/villawood-foam-cube.webp',
     heading: 'ACE Polystyrene \u2014 Factory-Direct Foam',
-    sub: 'Graphite EPS foam panels, mouldings, and sun hoods \u2014 factory-direct pricing from ACE Polystyrene.',
+    sub: 'Graphite EPS foam panels, mouldings, and landscaping blocks \u2014 factory-direct pricing from ACE Polystyrene.',
   },
 ]
 

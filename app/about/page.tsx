@@ -87,7 +87,7 @@ export default function AboutPage() {
                   you&rsquo;d get ordering through the supply chain.
                 </p>
                 <p>
-                  Beyond panels, ACE produces foam sun hoods, landscaping blocks, expanding PU foam,
+                  Beyond panels, ACE produces landscaping blocks, expanding PU foam,
                   and a full range of architectural mouldings &mdash; window surrounds, cornices,
                   columns, pilasters, band courses, and architraves. All supplied direct
                   to our Villawood and Prestons stores.
@@ -116,7 +116,7 @@ export default function AboutPage() {
             {[
               {
                 title: 'Foam Panels & Insulation',
-                desc: 'Graphite EPS panels in all thicknesses (10mm\u2013600mm), sun hoods, landscaping blocks, and expanding foam. Factory-direct from ACE Polystyrene.',
+                desc: 'Graphite EPS panels in all thicknesses (10mm\u2013600mm), landscaping blocks, and expanding foam. Factory-direct from ACE Polystyrene.',
                 image: '/images/villawood-foam-racking.webp',
               },
               {
@@ -176,7 +176,7 @@ export default function AboutPage() {
             {[
               {
                 name: 'ACE Polystyrene', logo: '/images/ACE.webp', logoBg: '',
-                desc: 'Graphite EPS foam panels, mouldings, sun hoods, and expanding foam \u2014 factory-direct pricing from ACE Polystyrene.',
+                desc: 'Graphite EPS foam panels, mouldings, and expanding foam \u2014 factory-direct pricing from ACE Polystyrene.',
               },
               {
                 name: 'Euromix', logo: '/images/Euromix.webp', logoBg: '',

@@ -19,7 +19,7 @@ export const CATEGORY_META: Record<
   Foam: {
     label: 'Foam',
     description:
-      'Factory-direct ACE graphite EPS foam panels, sun hoods, landscaping blocks, and expanding foam.',
+      'Factory-direct ACE graphite EPS foam panels, landscaping blocks, and expanding foam.',
     icon: '▪',
     slug: 'foam',
   },

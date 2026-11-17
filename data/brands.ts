@@ -35,7 +35,6 @@ export const brands: Brand[] = [
       'ACE Polystyrene has manufactured high-density graphite-infused EPS foam panels, foam mouldings, and architectural features at Condell Park, NSW since 2000. CBS supplies the full ACE range at factory-direct pricing, with custom sizing cut to order and short lead times on trade quantities.',
     productTypes: [
       'Graphite EPS Foam Panels (all thicknesses)',
-      'Foam Sun Hoods',
       'Landscaping Foam Blocks',
       'Foam Window Surrounds & Mouldings',
       'Cornices, Columns & Pilasters',
