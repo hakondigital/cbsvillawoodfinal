@@ -10,9 +10,10 @@ export const metadata: Metadata = {
   description: 'Browse the full CBS product catalogue.',
 }
 
-const BRAND_LOGOS: { src: string; alt: string; href: string; bg?: string; tall?: boolean }[] = [
-  { src: '/images/ACE.webp', alt: 'ACE', href: '/products?brand=ACE' },
-  { src: '/images/Mac-Render.webp', alt: 'Melbacrylic', href: '/products?brand=Melbacrylic', tall: true },
+// h = tile height; the ACE lettermark is squarer than the others so it runs a little taller (client, 17 Nov)
+const BRAND_LOGOS: { src: string; alt: string; href: string; bg?: string; h?: number }[] = [
+  { src: '/images/ace-logo-orange.webp', alt: 'ACE', href: '/products?brand=ACE', h: 38 },
+  { src: '/images/Mac-Render.webp', alt: 'Melbacrylic', href: '/products?brand=Melbacrylic', h: 44 },
   { src: '/images/FINALLOGONOVATEX.webp', alt: 'Novatex', href: '/products?brand=Novatex' },
   { src: '/images/Euromix.webp', alt: 'Euromix', href: '/products?brand=Euromix' },
   { src: '/images/unitex-logo.svg', alt: 'Unitex', href: '/products?brand=Unitex' },
@@ -35,7 +36,7 @@ export default function ProductsPage() {
         <div className="container-site flex items-center gap-6 flex-wrap">
           <span className="font-heading text-ink/30" style={{ fontSize: 12, letterSpacing: '0.12em' }}>SHOP BY BRAND</span>
           {BRAND_LOGOS.map((l) => (
-            <Link key={l.alt} href={l.href} className={`relative flex-shrink-0 hover:opacity-70 transition-opacity ${l.bg || ''}`} style={{ height: l.tall ? 44 : 28, width: 'clamp(60px, 12vw, 90px)' }}>
+            <Link key={l.alt} href={l.href} className={`relative flex-shrink-0 hover:opacity-70 transition-opacity ${l.bg || ''}`} style={{ height: l.h ?? 28, width: 'clamp(60px, 12vw, 90px)' }}>
               <Image src={l.src} alt={l.alt} fill className="object-contain p-0.5" sizes="90px" />
             </Link>
           ))}

@@ -4,9 +4,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 // Same order as the footer strip: MAC Render in Euromix's old slot and taller; Astec Wallmaster added.
-const LOGOS: { src: string; alt: string; dark?: boolean; tall?: boolean }[] = [
-  { src: '/images/ACE.webp', alt: 'ACE Polystyrene' },
-  { src: '/images/Mac-Render.webp', alt: 'Melbacrylic', tall: true },
+const LOGOS: { src: string; alt: string; dark?: boolean; h?: number }[] = [
+  { src: '/images/ace-logo-orange.webp', alt: 'ACE Polystyrene', h: 52 },
+  { src: '/images/Mac-Render.webp', alt: 'Melbacrylic', h: 60 },
   { src: '/images/FINALLOGONOVATEX.webp', alt: 'Novatex' },
   { src: '/images/Euromix.webp', alt: 'Euromix' },
   { src: '/images/unitex-logo.svg', alt: 'Unitex' },
@@ -31,7 +31,7 @@ export default function IntroSection() {
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div className="flex items-center justify-center sm:justify-start gap-4 md:gap-8 flex-wrap">
               {LOGOS.map((l) => (
-                <div key={l.alt} className={`relative flex-shrink-0 ${l.dark ? 'bg-ink px-1' : ''}`} style={{ height: l.tall ? 60 : 40, width: 'clamp(80px, 15vw, 130px)' }}>
+                <div key={l.alt} className={`relative flex-shrink-0 ${l.dark ? 'bg-ink px-1' : ''}`} style={{ height: l.h ?? 40, width: 'clamp(80px, 15vw, 130px)' }}>
                   <Image src={l.src} alt={l.alt} fill className="object-contain" sizes="130px" />
                 </div>
               ))}

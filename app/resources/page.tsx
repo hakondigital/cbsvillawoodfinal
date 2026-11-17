@@ -108,7 +108,7 @@ export default function ResourcesPage() {
       <div className="bg-white" style={{ borderBottom: '1px solid #e8e5e0', padding: '16px 0' }}>
         <div className="container-site flex items-center gap-4">
           <div className="relative" style={{ height: 36, width: 100 }}>
-            <Image src="/images/ACE.webp" alt="ACE Polystyrene" fill className="object-contain" sizes="100px" />
+            <Image src="/images/ace-logo-orange.webp" alt="ACE Polystyrene" fill className="object-contain" sizes="100px" />
           </div>
           <span className="font-body" style={{ fontSize: 14, color: 'rgba(26,26,24,0.5)' }}>ACE Polystyrene Technical Resources</span>
         </div>

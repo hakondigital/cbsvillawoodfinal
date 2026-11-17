@@ -30,7 +30,7 @@ export const brands: Brand[] = [
   {
     id: 'ace',
     name: 'ACE Polystyrene',
-    logoPath: '/images/ACE.webp',
+    logoPath: '/images/ace-logo-orange.webp',
     shortBlurb:
       'ACE Polystyrene has manufactured high-density graphite-infused EPS foam panels, foam mouldings, and architectural features at Condell Park, NSW since 2000. CBS supplies the full ACE range at factory-direct pricing, with custom sizing cut to order and short lead times on trade quantities.',
     productTypes: [

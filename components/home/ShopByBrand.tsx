@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const BRANDS = [
-  { name: 'ACE Polystyrene', logo: '/images/ACE.webp', bg: '', href: '/products?brand=ACE' },
+  { name: 'ACE Polystyrene', logo: '/images/ace-logo-orange.webp', bg: '', href: '/products?brand=ACE' },
   { name: 'ACE Moulding', logo: '/images/ace-moulding-logo.webp', bg: '', href: '/products?category=Mouldings' },
   { name: 'Euromix', logo: '/images/Euromix.webp', bg: '', href: '/products?brand=Euromix' },
   { name: 'Novatex', logo: '/images/FINALLOGONOVATEX.webp', bg: '', href: '/products?brand=Novatex' },

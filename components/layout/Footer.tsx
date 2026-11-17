@@ -4,7 +4,7 @@ import { PRIMARY_STORE, SECONDARY_STORE } from '@/lib/utils'
 
 // Order per client (Nov 2026): MAC Render takes Euromix's old slot and runs larger; Astec Wallmaster added.
 const BRAND_LOGOS: { src: string; alt: string; width: number; height?: number }[] = [
-  { src: '/images/ACE.webp', alt: 'ACE', width: 80 },
+  { src: '/images/ace-logo-orange.webp', alt: 'ACE', width: 92, height: 40 },
   { src: '/images/Mac-Render.webp', alt: 'Melbacrylic', width: 90, height: 50 },
   { src: '/images/FINALLOGONOVATEX.webp', alt: 'Novatex', width: 120 },
   { src: '/images/Euromix.webp', alt: 'Euromix', width: 100 },

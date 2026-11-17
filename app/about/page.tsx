@@ -71,7 +71,7 @@ export default function AboutPage() {
             {/* Text */}
             <div>
               <div className="relative overflow-hidden mb-6" style={{ height: 44, width: 120 }}>
-                <Image src="/images/ACE.webp" alt="ACE Polystyrene" fill className="object-contain object-left brightness-0 invert" sizes="120px" />
+                <Image src="/images/ace-logo-orange.webp" alt="ACE Polystyrene" fill className="object-contain object-left" sizes="120px" />
               </div>
               <h2 className="text-white mb-6">ACE Polystyrene &mdash; Factory-Direct Foam</h2>
               <div className="space-y-4" style={{ fontSize: 16, lineHeight: 1.8, color: 'rgba(245,242,238,0.6)' }}>
@@ -175,7 +175,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                name: 'ACE Polystyrene', logo: '/images/ACE.webp', logoBg: '',
+                name: 'ACE Polystyrene', logo: '/images/ace-logo-orange.webp', logoBg: '',
                 desc: 'Graphite EPS foam panels, mouldings, and expanding foam \u2014 factory-direct pricing from ACE Polystyrene.',
               },
               {
