@@ -24,15 +24,16 @@ export default function ShopByBrand() {
           Browse products from the brands we stock.
         </p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
+        {/* Three wide cards per row on desktop (two on phones); the logo fills the card above its label. */}
+        <div className="flex flex-wrap justify-center gap-3 md:gap-4">
           {BRANDS.map((b) => (
             <Link key={b.name} href={b.href}
-              className={`group flex flex-col items-center justify-center p-3 md:p-4 transition-shadow hover:shadow-md ${b.bg || 'bg-white'}`}
-              style={{ height: 'clamp(160px, 19vw, 240px)', border: '1px solid #e8e5e0' }}>
-              <div className="relative mb-3" style={{ height: 'clamp(80px, 11vw, 140px)', width: '100%' }}>
-                <Image src={b.logo} alt={b.name} fill className="object-contain" sizes="320px" />
+              className={`group flex flex-col items-center p-3 md:p-4 transition-shadow hover:shadow-md aspect-[4/3] md:aspect-[3/2] shrink-0 grow-0 basis-[calc(50%_-_6px)] md:basis-[calc(33.333%_-_11px)] ${b.bg || 'bg-white'}`}
+              style={{ border: '1px solid #e8e5e0' }}>
+              <div className="relative w-full flex-1 min-h-0 mb-2 md:mb-3">
+                <Image src={b.logo} alt={b.name} fill className="object-contain" sizes="(max-width: 768px) 50vw, 420px" />
               </div>
-              <span className="font-body text-center group-hover:text-cbs transition-colors" style={{ fontSize: 'clamp(10px, 1.2vw, 12px)', fontWeight: 600, color: b.bg ? '#fff' : '#1a1a18' }}>
+              <span className="font-body text-center group-hover:text-cbs transition-colors" style={{ fontSize: 'clamp(11px, 1.2vw, 13px)', fontWeight: 600, color: b.bg ? '#fff' : '#1a1a18' }}>
                 {b.name}
               </span>
             </Link>

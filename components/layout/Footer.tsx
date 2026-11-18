@@ -3,14 +3,16 @@ import Image from 'next/image'
 import { PRIMARY_STORE, SECONDARY_STORE } from '@/lib/utils'
 
 // Order per client (Nov 2026): MAC Render takes Euromix's old slot and runs larger; Astec Wallmaster added.
-const BRAND_LOGOS: { src: string; alt: string; width: number; height?: number }[] = [
-  { src: '/images/ace-logo-orange.webp', alt: 'ACE', width: 130, height: 60 },
-  { src: '/images/Mac-Render.webp', alt: 'Melbacrylic', width: 110, height: 62 },
-  { src: '/images/FINALLOGONOVATEX.webp', alt: 'Novatex', width: 150 },
-  { src: '/images/Euromix.webp', alt: 'Euromix', width: 140 },
-  { src: '/images/unitex-logo.svg', alt: 'Unitex', width: 130 },
-  { src: '/images/builders-emporium-logo.svg', alt: 'Builders Emporium', width: 150 },
-  { src: '/images/astec-wallmaster-logo.webp', alt: 'Astec Wallmaster', width: 160 },
+// Two rows of four full-width tiles; each logo scales to fill its column.
+const BRAND_LOGOS: { src: string; alt: string }[] = [
+  { src: '/images/ace-logo-orange.webp', alt: 'ACE' },
+  { src: '/images/Mac-Render.webp', alt: 'Melbacrylic' },
+  { src: '/images/FINALLOGONOVATEX.webp', alt: 'Novatex' },
+  { src: '/images/Euromix.webp', alt: 'Euromix' },
+  { src: '/images/unitex-logo.svg', alt: 'Unitex' },
+  { src: '/images/builders-emporium-logo.svg', alt: 'Builders Emporium' },
+  { src: '/images/astec-wallmaster-logo.webp', alt: 'Astec Wallmaster' },
+  { src: '/images/trademark-wholesale-logo.webp', alt: 'TradeMark' },
 ]
 
 export default function Footer() {
@@ -22,10 +24,10 @@ export default function Footer() {
           <p className="font-heading" style={{ fontSize: 13, letterSpacing: '0.12em', color: 'rgba(245,242,238,0.3)' }}>
             BRANDS WE STOCK
           </p>
-          <div className="flex items-center gap-6 md:gap-8 flex-wrap">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
             {BRAND_LOGOS.map((l) => (
-              <div key={l.alt} className="relative flex-shrink-0" style={{ height: l.height ?? 48, width: l.width }}>
-                <Image src={l.src} alt={l.alt} fill className="object-contain" sizes="190px" />
+              <div key={l.alt} className="relative w-full h-16 sm:h-20 md:h-24">
+                <Image src={l.src} alt={l.alt} fill className="object-contain" sizes="(max-width: 768px) 45vw, 320px" />
               </div>
             ))}
           </div>
