@@ -27,9 +27,9 @@ export default function ShopByBrand() {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
           {BRANDS.map((b) => (
             <Link key={b.name} href={b.href}
-              className={`group flex flex-col items-center justify-center p-3 md:p-5 transition-shadow hover:shadow-md ${b.bg || 'bg-white'}`}
-              style={{ height: 'clamp(140px, 17vw, 210px)', border: '1px solid #e8e5e0' }}>
-              <div className="relative mb-3" style={{ height: 'clamp(66px, 9.5vw, 118px)', width: '100%' }}>
+              className={`group flex flex-col items-center justify-center p-3 md:p-4 transition-shadow hover:shadow-md ${b.bg || 'bg-white'}`}
+              style={{ height: 'clamp(160px, 19vw, 240px)', border: '1px solid #e8e5e0' }}>
+              <div className="relative mb-3" style={{ height: 'clamp(80px, 11vw, 140px)', width: '100%' }}>
                 <Image src={b.logo} alt={b.name} fill className="object-contain" sizes="320px" />
               </div>
               <span className="font-body text-center group-hover:text-cbs transition-colors" style={{ fontSize: 'clamp(10px, 1.2vw, 12px)', fontWeight: 600, color: b.bg ? '#fff' : '#1a1a18' }}>

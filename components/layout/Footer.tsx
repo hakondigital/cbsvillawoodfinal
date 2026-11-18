@@ -4,13 +4,13 @@ import { PRIMARY_STORE, SECONDARY_STORE } from '@/lib/utils'
 
 // Order per client (Nov 2026): MAC Render takes Euromix's old slot and runs larger; Astec Wallmaster added.
 const BRAND_LOGOS: { src: string; alt: string; width: number; height?: number }[] = [
-  { src: '/images/ace-logo-orange.webp', alt: 'ACE', width: 92, height: 40 },
-  { src: '/images/Mac-Render.webp', alt: 'Melbacrylic', width: 90, height: 50 },
-  { src: '/images/FINALLOGONOVATEX.webp', alt: 'Novatex', width: 120 },
-  { src: '/images/Euromix.webp', alt: 'Euromix', width: 100 },
-  { src: '/images/unitex-logo.svg', alt: 'Unitex', width: 100 },
-  { src: '/images/builders-emporium-logo.svg', alt: 'Builders Emporium', width: 120 },
-  { src: '/images/astec-wallmaster-logo.webp', alt: 'Astec Wallmaster', width: 130 },
+  { src: '/images/ace-logo-orange.webp', alt: 'ACE', width: 130, height: 60 },
+  { src: '/images/Mac-Render.webp', alt: 'Melbacrylic', width: 110, height: 62 },
+  { src: '/images/FINALLOGONOVATEX.webp', alt: 'Novatex', width: 150 },
+  { src: '/images/Euromix.webp', alt: 'Euromix', width: 140 },
+  { src: '/images/unitex-logo.svg', alt: 'Unitex', width: 130 },
+  { src: '/images/builders-emporium-logo.svg', alt: 'Builders Emporium', width: 150 },
+  { src: '/images/astec-wallmaster-logo.webp', alt: 'Astec Wallmaster', width: 160 },
 ]
 
 export default function Footer() {
@@ -18,14 +18,14 @@ export default function Footer() {
     <footer className="bg-ink" style={{ color: 'rgba(245,242,238,0.6)' }}>
       {/* Brand logos strip at top of footer */}
       <div style={{ borderBottom: '1px solid rgba(245,242,238,0.1)', padding: '28px 0' }}>
-        <div className="container-site flex items-center justify-between flex-wrap gap-6">
+        <div className="container-site flex flex-col gap-5">
           <p className="font-heading" style={{ fontSize: 13, letterSpacing: '0.12em', color: 'rgba(245,242,238,0.3)' }}>
             BRANDS WE STOCK
           </p>
-          <div className="flex items-center gap-6 md:gap-10 flex-wrap">
+          <div className="flex items-center gap-6 md:gap-8 flex-wrap">
             {BRAND_LOGOS.map((l) => (
-              <div key={l.alt} className="relative flex-shrink-0" style={{ height: l.height ?? 30, width: l.width }}>
-                <Image src={l.src} alt={l.alt} fill className="object-contain" sizes="120px" />
+              <div key={l.alt} className="relative flex-shrink-0" style={{ height: l.height ?? 48, width: l.width }}>
+                <Image src={l.src} alt={l.alt} fill className="object-contain" sizes="190px" />
               </div>
             ))}
           </div>
