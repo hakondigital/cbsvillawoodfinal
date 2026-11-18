@@ -80,8 +80,8 @@ type PanelVariant = 'standard' | 'grooved' | 'flexi'
 const PANEL_IMAGE: Record<PanelVariant, string> = {
   standard: '/images/cbs-foam-panel.webp',
   grooved: '/images/products/ace-grooved-foam-panel.webp',
-  // TODO(client): the "flexi panel" photo named in the 17 Nov email was not attached; standard panel image until it arrives.
-  flexi: '/images/cbs-foam-panel.webp',
+  // Flexi panel photo from the client (18 Nov, WhatsApp). Cropped from the chat preview; swap in the full-res original if one is supplied.
+  flexi: '/images/products/ace-flexi-foam-panel.webp',
 }
 
 function acePanel(thickness: string, size: string, rValue: string, variant: PanelVariant = 'standard'): Product {
