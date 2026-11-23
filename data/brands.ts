@@ -24,6 +24,8 @@ export interface Brand {
   accentColor?: string
   // Logo artwork is white/light — render it on a dark tile so it stays visible
   logoOnDark?: boolean
+  // Override for the "View Products" button (e.g. a category filter instead of a brand filter)
+  productsHref?: string
 }
 
 export const brands: Brand[] = [
@@ -47,6 +49,26 @@ export const brands: Brand[] = [
     inHouse: false,
     featured: true,
     accentColor: '#C8491A',
+  },
+  {
+    id: 'ace-mouldings',
+    name: 'ACE Mouldings',
+    logoPath: '/images/ace-moulding-logo.webp',
+    shortBlurb:
+      'ACE Mouldings is the architectural foam range from ACE Polystyrene: window and door surrounds, band courses, sills, cornices, columns and pilasters, profiled from high-density EPS and ready to be rendered on site. CBS keeps the standard profiles in stock at Villawood and can have custom profiles cut to your drawings.',
+    productTypes: [
+      'Standard Profiles from 90×35mm to 330×210mm (17 sizes)',
+      'Sill Mouldings SM 100×40 to 150×50',
+      'Feature Mouldings FM 80×30 & 100×30',
+      'Window & Door Surrounds',
+      'Band Courses, Cornices & Pilasters',
+      'Custom Profiles Cut to Order',
+    ],
+    websiteUrl: 'https://www.acepolystyrene.com.au/mouldings.html',
+    inHouse: false,
+    featured: true,
+    accentColor: '#C8491A',
+    productsHref: '/products?category=Mouldings',
   },
   {
     id: 'euromix',
@@ -155,6 +177,27 @@ export const brands: Brand[] = [
     logoOnDark: true,
   },
   {
+    id: 'astec',
+    name: 'Astec Wallmaster',
+    logoPath: '/images/astec-wallmaster-logo.webp',
+    shortBlurb:
+      'Astec Paints has developed, tested and manufactured coatings in Australia since 1978 and remains 100% Australian owned. CBS stocks the Astec Wallmaster trade range — the Firewall fire-rated render system, Energy Star heat-reflective exterior coatings and the EC-2000 and EC-5000 membranes — alongside its other render systems.',
+    productTypes: [
+      'Energy Star Dirtguard IR Elastic PCM LS',
+      'EC-5000 PCM Low Sheen',
+      'EC-2000 Extreme Low Sheen',
+      'Energy Star Exterior Low Sheen',
+      'Firewall Render',
+      'Firewall 1530 Render (Non-Combustible)',
+      'Firewall Rota-Render (Non-Combustible)',
+      'Firewall Skim',
+      'Firewall Aggra-Prime',
+    ],
+    websiteUrl: 'https://www.wallmasterpaints.com.au/',
+    inHouse: false,
+    featured: true,
+  },
+  {
     id: 'trademark',
     name: 'TradeMark Wholesale',
     logoPath: '/images/trademark-wholesale-logo.webp',
@@ -166,6 +209,26 @@ export const brands: Brand[] = [
     ],
     websiteUrl: 'https://www.trademarkwholesale.com.au/',
     // Placeholder — confirm URL with client
+    inHouse: false,
+    featured: false,
+  },
+  {
+    id: 'iquip',
+    name: 'iQuip',
+    logoPath: '/images/iquip-logo.webp',
+    shortBlurb:
+      'iQuip Group is an Australian family-owned wholesaler of premium paint and render accessories, tools and equipment, supplying the trade nationwide under the motto "Committed to the Finish". CBS carries iQuip rendering and painting tools over the counter at Villawood; ask in store for the full range.',
+    // TODO(client): confirm which iQuip lines CBS stocks; this is the render-relevant part of their catalogue.
+    productTypes: [
+      'Render Trowels, Floats & Rasps',
+      'Straight Edges & Screeds',
+      'Turbo Roller & PRO Polyester Roller Sleeves',
+      'Paint Brushes, Roller Frames & Poles',
+      'Masking Tape & Pre-Taped Masking Film',
+      'Putty Knives, Scrapers & Caulking Guns',
+      'Patching, Filling & Adhesives',
+    ],
+    websiteUrl: 'https://www.iquip.com.au/',
     inHouse: false,
     featured: false,
   },

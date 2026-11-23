@@ -3,9 +3,10 @@ import Image from 'next/image'
 import { PRIMARY_STORE, SECONDARY_STORE } from '@/lib/utils'
 
 // Order per client (Nov 2026): MAC Render takes Euromix's old slot and runs larger; Astec Wallmaster added.
-// Two rows of four full-width tiles; each logo scales to fill its column.
+// Every stocked brand as full-width tiles (five per row on desktop); each logo scales to fill its column.
 const BRAND_LOGOS: { src: string; alt: string }[] = [
   { src: '/images/ace-logo-orange.webp', alt: 'ACE' },
+  { src: '/images/ace-moulding-logo.webp', alt: 'ACE Mouldings' },
   { src: '/images/Mac-Render.webp', alt: 'Melbacrylic' },
   { src: '/images/FINALLOGONOVATEX.webp', alt: 'Novatex' },
   { src: '/images/Euromix.webp', alt: 'Euromix' },
@@ -13,6 +14,8 @@ const BRAND_LOGOS: { src: string; alt: string }[] = [
   { src: '/images/builders-emporium-logo.svg', alt: 'Builders Emporium' },
   { src: '/images/astec-wallmaster-logo.webp', alt: 'Astec Wallmaster' },
   { src: '/images/trademark-wholesale-logo.webp', alt: 'TradeMark' },
+  // iQuip's wordmark is navy, so the footer uses their white-on-dark version
+  { src: '/images/iquip-logo-white.webp', alt: 'iQuip' },
 ]
 
 export default function Footer() {
@@ -24,7 +27,7 @@ export default function Footer() {
           <p className="font-heading" style={{ fontSize: 13, letterSpacing: '0.12em', color: 'rgba(245,242,238,0.3)' }}>
             BRANDS WE STOCK
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5 md:gap-8">
             {BRAND_LOGOS.map((l) => (
               <div key={l.alt} className="relative w-full h-16 sm:h-20 md:h-24">
                 <Image src={l.src} alt={l.alt} fill className="object-contain" sizes="(max-width: 768px) 45vw, 320px" />

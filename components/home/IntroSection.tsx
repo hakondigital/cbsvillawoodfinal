@@ -3,10 +3,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-// Same order as the footer strip: MAC Render in Euromix's old slot and taller; Astec Wallmaster added.
-const LOGOS: { src: string; alt: string; dark?: boolean; h?: number }[] = [
-  { src: '/images/ace-logo-orange.webp', alt: 'ACE Polystyrene', h: 72 },
-  { src: '/images/Mac-Render.webp', alt: 'Melbacrylic', h: 84 },
+// Every stocked brand, same order as the footer strip. Two rows of five on desktop; each logo fills its cell.
+const LOGOS: { src: string; alt: string; dark?: boolean }[] = [
+  { src: '/images/ace-logo-orange.webp', alt: 'ACE Polystyrene' },
+  { src: '/images/ace-moulding-logo.webp', alt: 'ACE Mouldings' },
+  { src: '/images/Mac-Render.webp', alt: 'Melbacrylic' },
   { src: '/images/FINALLOGONOVATEX.webp', alt: 'Novatex' },
   { src: '/images/Euromix.webp', alt: 'Euromix' },
   { src: '/images/unitex-logo.svg', alt: 'Unitex' },
@@ -14,6 +15,7 @@ const LOGOS: { src: string; alt: string; dark?: boolean; h?: number }[] = [
   { src: '/images/builders-emporium-logo.svg', alt: 'Builders Emporium', dark: true },
   { src: '/images/astec-wallmaster-logo.webp', alt: 'Astec Wallmaster' },
   { src: '/images/trademark-wholesale-logo.webp', alt: 'TradeMark' },
+  { src: '/images/iquip-logo.webp', alt: 'iQuip' },
 ]
 
 export default function IntroSection() {
@@ -28,15 +30,15 @@ export default function IntroSection() {
         </p>
 
         <div style={{ borderTop: '1px solid #e8e5e0', paddingTop: 24 }}>
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div className="flex items-center justify-center sm:justify-start gap-5 md:gap-10 flex-wrap">
-              {LOGOS.map((l) => (
-                <div key={l.alt} className={`relative flex-shrink-0 ${l.dark ? 'bg-ink px-1' : ''}`} style={{ height: l.h ?? 56, width: 'clamp(100px, 18vw, 170px)' }}>
-                  <Image src={l.src} alt={l.alt} fill className="object-contain" sizes="170px" />
-                </div>
-              ))}
-            </div>
-            <Link href="/brands" className="font-body text-cbs flex-shrink-0 text-center sm:text-right" style={{ fontSize: 14, fontWeight: 600 }}>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-x-6 gap-y-5 md:gap-x-10 md:gap-y-8 items-center">
+            {LOGOS.map((l) => (
+              <div key={l.alt} className={`relative w-full h-14 md:h-16 lg:h-20 ${l.dark ? 'bg-ink px-1' : ''}`}>
+                <Image src={l.src} alt={l.alt} fill className="object-contain" sizes="(max-width: 768px) 45vw, 240px" />
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 text-center md:text-right">
+            <Link href="/brands" className="font-body text-cbs" style={{ fontSize: 14, fontWeight: 600 }}>
               View all brands &rarr;
             </Link>
           </div>

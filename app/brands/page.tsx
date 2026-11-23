@@ -26,14 +26,16 @@ export default function BrandsPage() {
             <div key={brand.id} id={brand.id} className="grid grid-cols-1 lg:grid-cols-2 items-center" style={{ gap: 48 }}>
               {/* Logo + text */}
               <div className={i % 2 === 1 ? 'order-2' : ''}>
-                <div className={`relative mb-4 ${brand.logoOnDark ? 'bg-[#0a0a18] px-1' : ''}`} style={{ height: 48, width: 120 }}>
-                  <Image src={brand.logoPath} alt={brand.name} fill className="object-contain p-1" sizes="120px" />
+                <div className={`relative mb-5 ${brand.logoOnDark ? 'bg-[#0a0a18] px-1' : ''}`} style={{ height: 72, width: 200 }}>
+                  <Image src={brand.logoPath} alt={brand.name} fill className="object-contain object-left p-1" sizes="200px" />
                 </div>
                 <h2 className="text-ink mb-4" style={{ fontSize: 40, fontWeight: 800 }}>{brand.name}</h2>
                 {brand.inHouse && <p className="font-heading text-cbs mb-3" style={{ fontSize: 13, letterSpacing: '0.1em' }}>CBS-OWNED FACTORY</p>}
                 <p className="text-body-text mb-6" style={{ fontSize: 16, lineHeight: 1.8 }}>{brand.shortBlurb}</p>
                 <div className="flex gap-3 flex-wrap">
-                  {hasProducts(brand.id) && <Link href={`/products?brand=${brand.id}`} className="btn-brand text-[13px]">View Products</Link>}
+                  {(brand.productsHref || hasProducts(brand.id)) && (
+                    <Link href={brand.productsHref ?? `/products?brand=${brand.id}`} className="btn-brand text-[13px]">View Products</Link>
+                  )}
                   <a href={brand.websiteUrl} target="_blank" rel="noopener noreferrer" className="btn-outline-dark text-[13px]">Brand Site</a>
                 </div>
               </div>
