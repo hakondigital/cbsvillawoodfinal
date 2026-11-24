@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 
 const RESOURCES = [
   {
-    name: 'ACE Moulding Brochure (Feb 2026)',
-    description: 'CBS ACE moulding range — profiles, dimensions, quoins, capping, and keystone details with photo references.',
-    href: '/resources/CBS-ACE-Moulding-Brochure-Feb-2026.pdf',
+    name: 'CBS ACE Moulding Brochure',
+    description: 'The current CBS ACE moulding range — every profile with dimensions, plus quoins, keystone and capping details and installed examples.',
+    href: '/resources/CBS-ACE-Moulding-Brochure.pdf',
     category: 'Product Guide',
     image: '/images/resources/doc-ace-moulding-brochure.webp',
   },

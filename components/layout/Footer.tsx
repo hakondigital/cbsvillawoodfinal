@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { PRIMARY_STORE, SECONDARY_STORE } from '@/lib/utils'
+import { PRIMARY_STORE, SECONDARY_STORES } from '@/lib/utils'
 
 // Order per client (Nov 2026): MAC Render takes Euromix's old slot and runs larger; Astec Wallmaster added.
 // Every stocked brand as full-width tiles (five per row on desktop); each logo scales to fill its column.
@@ -41,12 +41,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-10">
           <div>
             <Link href="/" className="inline-block mb-4">
-              <div className="relative" style={{ height: 40, width: 140 }}>
-                <Image src="/images/cbs-villawood-logo.webp" alt="CBS" fill className="object-contain object-left" />
+              <div className="relative" style={{ height: 56, width: 200 }}>
+                <Image src="/images/cbs-logo.webp" alt="CBS" fill className="object-contain object-left" />
               </div>
             </Link>
             <p style={{ fontSize: 13, lineHeight: 2 }}>
-              Factory-direct ACE polystyrene, Euromix, Novatex, Melbacrylic, and Unitex render systems. Two trade locations in Western &amp; South West Sydney.
+              Factory-direct ACE polystyrene, Euromix, Novatex, Melbacrylic, and Unitex render systems. Trade locations in Villawood, Prestons and Canberra.
             </p>
             {/* TODO(client): Villawood socials. The Prestons Facebook/TikTok links were dropped; this Instagram is the company account. */}
             <div className="flex items-center gap-3 mt-3">
@@ -73,7 +73,7 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="font-heading mb-4" style={{ fontSize: 13, letterSpacing: '0.12em', color: '#f5f2ee' }}>STORES</h4>
-            {[PRIMARY_STORE, SECONDARY_STORE].map((s) => (
+            {[PRIMARY_STORE, ...SECONDARY_STORES].map((s) => (
               <div key={s.name} className="mb-3" style={{ fontSize: 13, lineHeight: 2 }}>
                 <p style={{ color: '#f5f2ee' }} className="font-body font-semibold">{s.name}</p>
                 <p>{s.address}</p>

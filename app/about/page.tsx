@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { PRIMARY_STORE, SECONDARY_STORE, PRIMARY_STORE_PHOTO } from '@/lib/utils'
+import { PRIMARY_STORE, SECONDARY_STORES, PRIMARY_STORE_PHOTO } from '@/lib/utils'
 
 export default function AboutPage() {
   return (
@@ -40,10 +40,10 @@ export default function AboutPage() {
                   means your crew leaves with everything they need &mdash; every time.
                 </p>
                 <p>
-                  Today, CBS operates from two Western &amp; South West Sydney locations &mdash; our original
-                  Villawood store at 203 Woodville Road and our Prestons branch at Unit 1/16
-                  Bernera Road. Both stores open at 6am Monday to Friday and 6am Saturday,
-                  because we know the trade starts early.
+                  Today, CBS operates from three locations &mdash; our original Villawood store at
+                  203 Woodville Road, our Prestons branch at Unit 1/16 Bernera Road, and CBS ACT at
+                  4/110 Lysaght Street, Mitchell in Canberra. Both Sydney stores open at 6am Monday
+                  to Friday and 6am Saturday, because we know the trade starts early.
                 </p>
               </div>
             </div>
@@ -90,7 +90,7 @@ export default function AboutPage() {
                   Beyond panels, ACE produces landscaping blocks, expanding PU foam,
                   and a full range of architectural mouldings &mdash; window surrounds, cornices,
                   columns, pilasters, band courses, and architraves. All supplied direct
-                  to our Villawood and Prestons stores.
+                  to our Villawood, Prestons and Canberra stores.
                 </p>
               </div>
               <a href="https://www.acepolystyrene.com.au/" target="_blank" rel="noopener noreferrer"
@@ -293,21 +293,25 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Sister store — compact secondary */}
+          {/* Sister stores — compact cards, one per branch */}
           <div className="mt-10 pt-8" style={{ borderTop: '1px solid #e8e5e0' }}>
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-              <div>
-                <p className="font-heading mb-2" style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(26,26,24,0.35)' }}>Also visit our {SECONDARY_STORE.suburb} store</p>
-                <h4 className="text-ink mb-1" style={{ fontSize: 'clamp(16px, 2vw, 20px)', fontWeight: 700 }}>{SECONDARY_STORE.name}</h4>
-                <div className="flex flex-wrap gap-x-5 gap-y-1" style={{ fontSize: 14, color: '#666' }}>
-                  <span>{SECONDARY_STORE.address}</span>
-                  {SECONDARY_STORE.mobile && <a href={`tel:${SECONDARY_STORE.mobile}`} className="text-ink font-semibold">{SECONDARY_STORE.mobile}</a>}
-                  <a href={`tel:${SECONDARY_STORE.phone}`} className="text-ink font-semibold">{SECONDARY_STORE.phone}</a>
-                  <span>{SECONDARY_STORE.email}</span>
-                  <span>Mon&ndash;Fri {SECONDARY_STORE.hours.weekdays} &middot; Sat {SECONDARY_STORE.hours.saturday}</span>
+            <p className="font-heading mb-5" style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(26,26,24,0.35)' }}>Also visit our other stores</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+              {SECONDARY_STORES.map((v) => (
+                <div key={v.name} className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                  <div>
+                    <h4 className="text-ink mb-1" style={{ fontSize: 'clamp(16px, 2vw, 20px)', fontWeight: 700 }}>{v.name}</h4>
+                    <div className="flex flex-wrap gap-x-5 gap-y-1" style={{ fontSize: 14, color: '#666' }}>
+                      <span>{v.address}</span>
+                      {v.mobile && <a href={`tel:${v.mobile}`} className="text-ink font-semibold">{v.mobile}</a>}
+                      <a href={`tel:${v.phone}`} className="text-ink font-semibold">{v.phone}</a>
+                      {v.email && <span>{v.email}</span>}
+                      {v.hours && <span>Mon&ndash;Fri {v.hours.weekdays} &middot; Sat {v.hours.saturday}</span>}
+                    </div>
+                  </div>
+                  <a href={v.mapEmbedUrl} target="_blank" rel="noopener noreferrer" className="btn-outline-dark inline-flex text-[13px] flex-shrink-0">Get Directions &rarr;</a>
                 </div>
-              </div>
-              <a href={SECONDARY_STORE.mapEmbedUrl} target="_blank" rel="noopener noreferrer" className="btn-outline-dark inline-flex text-[13px] flex-shrink-0">Get Directions &rarr;</a>
+              ))}
             </div>
           </div>
         </div>

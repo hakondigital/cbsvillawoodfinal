@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-// Every stocked brand. Brands without products in the catalogue link out to their own site (external).
+// Every stocked brand. Brands without catalogue products go to their Brands-page section; never off-site (client, 24 Nov: management found external links confusing).
 const BRANDS: { name: string; logo: string; bg: string; href: string; external?: boolean }[] = [
   { name: 'ACE Polystyrene', logo: '/images/ace-logo-orange.webp', bg: '', href: '/products?brand=ACE' },
   { name: 'ACE Mouldings', logo: '/images/ace-moulding-logo.webp', bg: '', href: '/products?category=Mouldings' },
@@ -14,8 +14,8 @@ const BRANDS: { name: string; logo: string; bg: string; href: string; external?:
   // White artwork — rendered on a dark tile
   { name: 'Builders Emporium', logo: '/images/builders-emporium-logo.svg', bg: 'bg-ink', href: '/products?brand=Builders+Emporium' },
   { name: 'Astec Wallmaster', logo: '/images/astec-wallmaster-logo.webp', bg: '', href: '/products?brand=Astec' },
-  { name: 'TradeMark', logo: '/images/trademark-wholesale-logo.webp', bg: '', href: 'https://www.trademarkwholesale.com.au/', external: true },
-  { name: 'iQuip', logo: '/images/iquip-logo.webp', bg: '', href: 'https://www.iquip.com.au/', external: true },
+  { name: 'TradeMark', logo: '/images/trademark-wholesale-logo.webp', bg: '', href: '/brands#trademark' },
+  { name: 'iQuip', logo: '/images/iquip-logo.webp', bg: '', href: '/brands#iquip' },
 ]
 
 const CARD = 'group flex flex-col items-center p-3 md:p-4 transition-shadow hover:shadow-md aspect-[4/3] md:aspect-[3/2] shrink-0 grow-0 basis-[calc(50%_-_6px)] md:basis-[calc(33.333%_-_11px)]'

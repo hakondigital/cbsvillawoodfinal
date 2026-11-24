@@ -120,6 +120,31 @@ export function medium(imagePath: string): string {
  * shown as "also visit". To spin up another branch site (e.g. CBS ACT), add its entry
  * below and point PRIMARY_STORE / SECONDARY_STORE at the right stores.
  */
+/** A CBS branch. Details the client has not supplied yet (e.g. ACT email and hours) are optional and simply not rendered. */
+export type Store = {
+  name: string
+  suburb: string
+  tagline: string
+  address: string
+  phone: string
+  mobile?: string
+  email?: string
+  hours?: { weekdays: string; saturday: string; sunday: string }
+  mapEmbedUrl: string
+  googleMapsEmbed: string
+}
+
+// TODO(client): confirm the ACT phone (taken from the "Central Building Supplies ACT" Facebook page) and supply an email and trading hours.
+const ACT: Store = {
+  name: 'CBS ACT',
+  suburb: 'ACT',
+  tagline: 'Our Canberra branch in Mitchell, supplying renderers across the ACT and surrounding region.',
+  address: '4/110 Lysaght St, Mitchell ACT 2911',
+  phone: '0431 276 655',
+  mapEmbedUrl: 'https://www.google.com/maps/search/4%2F110+Lysaght+St+Mitchell+ACT+2911',
+  googleMapsEmbed: 'https://maps.google.com/maps?q=4%2F110+Lysaght+St,+Mitchell+ACT+2911&t=&z=15&ie=UTF8&iwloc=&output=embed',
+}
+
 export const CBS_STORE = {
   villawood: {
     name: 'CBS Villawood',
@@ -158,12 +183,15 @@ export const CBS_STORE = {
     googleMapsEmbed:
       'https://maps.google.com/maps?q=Central+Building+Supplies+Prestons&t=&z=15&ie=UTF8&iwloc=&output=embed',
   },
+  act: ACT,
 }
 
 /** The branch this site is for. Header, CTAs, product drawer and footer all read from this. */
 export const PRIMARY_STORE = CBS_STORE.villawood
 /** The sister branch, cross-promoted in the store sections, contact page and footer. */
 export const SECONDARY_STORE = CBS_STORE.prestons
+/** All sister branches in display order (client, 24 Nov 2026: CBS ACT shown as the third store beside Prestons). */
+export const SECONDARY_STORES: Store[] = [CBS_STORE.prestons, CBS_STORE.act]
 
 /**
  * Photo of the primary store, used in the hero, about page and store sections.

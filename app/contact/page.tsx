@@ -2,13 +2,13 @@
 
 import { Fragment, useState } from 'react'
 import { CheckCircle } from 'lucide-react'
-import { PRIMARY_STORE, SECONDARY_STORE } from '@/lib/utils'
+import { PRIMARY_STORE, SECONDARY_STORES } from '@/lib/utils'
 
 type FD = { name: string; company: string; email: string; phone: string; projectType: string; message: string }
 type FS = 'idle' | 'submitting' | 'success' | 'error'
 const PTS = ['Residential – New Build', 'Residential – Renovation', 'Commercial – New Build', 'Commercial – Remedial', 'Industrial', 'Other']
 // Primary store first — it takes the left-hand map and the top phone line.
-const STORES = [PRIMARY_STORE, SECONDARY_STORE]
+const STORES = [PRIMARY_STORE, ...SECONDARY_STORES]
 
 export default function ContactPage() {
   const [form, setForm] = useState<FD>({ name: '', company: '', email: '', phone: '', projectType: '', message: '' })
@@ -64,14 +64,14 @@ export default function ContactPage() {
     <>
       <section className="bg-ink" style={{ padding: '60px 0 50px' }}>
         <div className="container-site">
-          <h1 className="text-white">Two locations. Open early.</h1>
+          <h1 className="text-white">Three locations. Open early.</h1>
         </div>
       </section>
 
       {/* Stores — both maps side by side, primary store on the left */}
       <section className="bg-white py-12 md:py-20">
         <div className="container-site">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
             {STORES.map((s) => (
               <div key={s.name}>
                 <div className="overflow-hidden mb-5" style={{ height: 'clamp(200px, 35vw, 360px)' }}>
@@ -91,10 +91,16 @@ export default function ContactPage() {
                   <p>{s.address}</p>
                   <p><a href={`tel:${s.phone}`} className="text-ink font-semibold">{s.phone}</a>{s.mobile ? ' (landline)' : ''}</p>
                   {s.mobile && <p><a href={`tel:${s.mobile}`} className="text-ink font-semibold">{s.mobile}</a> (mobile)</p>}
-                  <p>{s.email}</p>
-                  <p>Mon&ndash;Fri {s.hours.weekdays}</p>
-                  <p>Sat {s.hours.saturday}</p>
-                  <p>Sun {s.hours.sunday}</p>
+                  {s.email && <p>{s.email}</p>}
+                  {s.hours ? (
+                    <>
+                      <p>Mon&ndash;Fri {s.hours.weekdays}</p>
+                      <p>Sat {s.hours.saturday}</p>
+                      <p>Sun {s.hours.sunday}</p>
+                    </>
+                  ) : (
+                    <p>Call for trading hours</p>
+                  )}
                 </div>
                 <a href={s.mapEmbedUrl} target="_blank" rel="noopener noreferrer" className="btn-outline-dark mt-5 inline-flex text-[13px]">Get Directions &rarr;</a>
               </div>

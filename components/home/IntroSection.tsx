@@ -26,7 +26,7 @@ export default function IntroSection() {
           <strong>Central Building Supplies</strong> is Western &amp; South West Sydney&rsquo;s specialist
           trade supplier for renderers and builders. Factory-direct ACE polystyrene foam,
           four leading render systems, plus mouldings, tools, and accessories &mdash; all
-          under one roof at our Villawood and Prestons locations.
+          under one roof at our Villawood, Prestons and Canberra locations.
         </p>
 
         <div style={{ borderTop: '1px solid #e8e5e0', paddingTop: 24 }}>

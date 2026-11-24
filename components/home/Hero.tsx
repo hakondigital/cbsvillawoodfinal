@@ -8,7 +8,7 @@ const SLIDES = [
   {
     image: PRIMARY_STORE_PHOTO,
     heading: 'Western & South West Sydney\u2019s Trade Render & Foam Supplier',
-    sub: 'Factory-direct ACE polystyrene foam, plus Euromix, Novatex, Melbacrylic & Unitex render systems. Two locations.',
+    sub: 'Factory-direct ACE polystyrene foam, plus Euromix, Novatex, Melbacrylic & Unitex render systems. Three locations.',
   },
   {
     image: '/images/cbs-villawood-sign.webp',

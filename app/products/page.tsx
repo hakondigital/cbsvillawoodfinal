@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: 'Browse the full CBS product catalogue.',
 }
 
-// Every stocked brand. h = tile height; squarer marks run taller. Brands with no catalogue products link out to their own site.
+// Every stocked brand. h = tile height; squarer marks run taller. Brands with no catalogue products go to their Brands-page section (never off-site, per the client).
 const BRAND_LOGOS: { src: string; alt: string; href: string; bg?: string; h?: number; external?: boolean }[] = [
   { src: '/images/ace-logo-orange.webp', alt: 'ACE', href: '/products?brand=ACE', h: 38 },
   { src: '/images/ace-moulding-logo.webp', alt: 'ACE Mouldings', href: '/products?category=Mouldings', h: 44 },
@@ -21,8 +21,8 @@ const BRAND_LOGOS: { src: string; alt: string; href: string; bg?: string; h?: nu
   // White artwork — needs a dark tile to be visible
   { src: '/images/builders-emporium-logo.svg', alt: 'Builders Emporium', href: '/products?brand=Builders+Emporium', bg: 'bg-ink px-1' },
   { src: '/images/astec-wallmaster-logo.webp', alt: 'Astec Wallmaster', href: '/products?brand=Astec' },
-  { src: '/images/trademark-wholesale-logo.webp', alt: 'TradeMark', href: 'https://www.trademarkwholesale.com.au/', external: true },
-  { src: '/images/iquip-logo.webp', alt: 'iQuip', href: 'https://www.iquip.com.au/', h: 44, external: true },
+  { src: '/images/trademark-wholesale-logo.webp', alt: 'TradeMark', href: '/brands#trademark' },
+  { src: '/images/iquip-logo.webp', alt: 'iQuip', href: '/brands#iquip', h: 44 },
 ]
 
 export default function ProductsPage() {

@@ -48,13 +48,13 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Main nav — 72px height */}
-      <header className="sticky top-0 z-30 bg-white border-b border-gray-200" style={{ height: 72 }}>
+      {/* Main nav — 80px on phones, 96px on desktop, so the full CBS logo (red roof + wordmark) runs large (client, 24 Nov) */}
+      <header className="sticky top-0 z-30 bg-white border-b border-gray-200 h-20 md:h-24">
         <div className="container-site h-full flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <div className="relative h-12 w-44 md:h-14 md:w-52">
-              <Image src="/images/cbs-villawood-logo.webp" alt="Central Building Supplies" fill className="object-contain object-left" priority />
+            <div className="relative h-16 w-40 md:h-[84px] md:w-64">
+              <Image src="/images/cbs-logo.webp" alt="Central Building Supplies" fill className="object-contain object-left" priority />
             </div>
           </Link>
 
