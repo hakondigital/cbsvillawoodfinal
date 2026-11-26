@@ -48,7 +48,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative overflow-hidden" style={{ height: 480 }}>
-              <Image src="/images/villawood-street-sign.webp" alt="CBS Villawood street sign on Woodville Road" fill className="object-cover" />
+              <Image src="/images/villawood-shopfront-wide.webp" alt="CBS Villawood shopfront on Woodville Road" fill className="object-cover" />
             </div>
           </div>
         </div>
@@ -61,10 +61,10 @@ export default function AboutPage() {
             {/* Photos */}
             <div className="grid grid-cols-2 gap-2">
               <div className="relative overflow-hidden" style={{ height: 300 }}>
-                <Image src="/images/villawood-foam-cube.webp" alt="ACE foam panels stacked in the Villawood warehouse" fill className="object-cover" />
+                <Image src="/images/villawood-foam-beads.webp" alt="ACE graphite EPS foam surface close-up" fill className="object-cover" />
               </div>
               <div className="relative overflow-hidden" style={{ height: 300 }}>
-                <Image src="/images/villawood-foam-stacks.webp" alt="ACE foam panel stacks" fill className="object-cover" />
+                <Image src="/images/villawood-foam-block-corner.webp" alt="ACE foam panel block corner" fill className="object-cover" />
               </div>
             </div>
 
