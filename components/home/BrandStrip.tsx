@@ -4,12 +4,27 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { medium } from '@/lib/utils'
 
-const BRANDS = [
-  { name: 'ACE Polystyrene', logo: '/images/ace-logo-orange.webp', logoBg: '', logoH: 96, image: '/images/villawood-foam-stacks.webp', copy: 'Graphite EPS foam panels in every thickness from 10mm to 600mm \u2014 CodeMark certified, BAL-29 rated. Architectural mouldings, landscaping blocks, expanding foam. Factory-direct pricing, custom sizing to order.', href: '/brands#ace' },
+// image2 (optional) is shown beside image, e.g. the two ACE foam photos the client asked to sit side by side (26 Nov 2026).
+const BRANDS: { name: string; logo: string; logoBg: string; logoH?: number; image: string; image2?: string; copy: string; href: string }[] = [
+  { name: 'ACE Polystyrene', logo: '/images/ace-logo-orange.webp', logoBg: '', logoH: 96, image: '/images/villawood-foam-blocks.webp', image2: '/images/villawood-foam-closeup.webp', copy: 'Graphite EPS foam panels in every thickness from 10mm to 600mm \u2014 CodeMark certified, BAL-29 rated. Architectural mouldings, landscaping blocks, expanding foam. Factory-direct pricing, custom sizing to order.', href: '/brands#ace' },
   { name: 'Euromix', logo: '/images/Euromix.webp', logoBg: '', image: '/images/ae359aba-d3d6-4e65-a119-cae00fdff431.webp', copy: 'Australian-made in Strathfield South. Premium acrylic-modified cement renders, skim coats, and plasters formulated with specially blended mineral fillers for superior crack resistance and workability. CBS distributes the full Euromix system.', href: '/brands#euromix' },
   { name: 'Novatex', logo: '/images/FINALLOGONOVATEX.webp', logoBg: '', image: '/images/23a7777e-5c66-48ee-9d1d-f93619e7f1c5.webp', copy: 'Over 70 years in the Australian building industry. Based in Wetherill Park, Novatex manufactures the EZ101 and ER100 render lines, SPR Acrylic polymer render, texture coatings, and the Ezytex skim range.', href: '/brands#novatex' },
-  { name: 'Melbacrylic', logo: '/images/Mac-Render.webp', logoBg: '', image: '/images/villawood-macbond-additives.webp', copy: 'Specialist cement and acrylic renders backed by a 7-year manufacturer\u2019s warranty. Macrender HBS for EPS, Coarse FR for AAC, and Supaskim finishing render. Their selector system matches the right product to every substrate.', href: '/brands#melbacrylic' },
+  { name: 'MAC Render', logo: '/images/mac-render-logo.webp', logoBg: '', logoH: 96, image: '/images/villawood-macbond-additives.webp', copy: 'Specialist cement and acrylic renders backed by a 7-year manufacturer\u2019s warranty. Macrender HBS for EPS, Coarse FR for AAC, and Supaskim finishing render. Their selector system matches the right product to every substrate.', href: '/brands#melbacrylic' },
 ]
+
+/** One photo, or two photos side by side when image2 is set. Fills the sized box it is placed in. */
+function Pics({ brand, sizes }: { brand: (typeof BRANDS)[number]; sizes: string }) {
+  const imgs = brand.image2 ? [brand.image, brand.image2] : [brand.image]
+  return (
+    <div className="flex h-full w-full gap-1">
+      {imgs.map((src) => (
+        <div key={src} className="relative flex-1 h-full overflow-hidden">
+          <Image src={medium(src)} alt={brand.name} fill className="object-cover" sizes={sizes} />
+        </div>
+      ))}
+    </div>
+  )
+}
 
 export default function BrandStrip() {
   return (
@@ -24,14 +39,14 @@ export default function BrandStrip() {
           {BRANDS.map((brand, i) => (
             <div key={brand.name}>
               {/* Image — always full width on mobile */}
-              <div className={`relative overflow-hidden mb-5 lg:hidden`} style={{ height: 'clamp(200px, 50vw, 300px)' }}>
-                <Image src={medium(brand.image)} alt={brand.name} fill className="object-cover" sizes="100vw" />
+              <div className="relative overflow-hidden mb-5 lg:hidden" style={{ height: 'clamp(200px, 50vw, 300px)' }}>
+                <Pics brand={brand} sizes="100vw" />
               </div>
 
               {/* Desktop: side by side. Mobile: stacked (image above, text below) */}
               <div className="hidden lg:grid lg:grid-cols-2 gap-0 items-center">
                 <div className={`relative overflow-hidden ${i % 2 === 1 ? 'order-2' : ''}`} style={{ height: 400 }}>
-                  <Image src={medium(brand.image)} alt={brand.name} fill className="object-cover" sizes="50vw" />
+                  <Pics brand={brand} sizes="25vw" />
                 </div>
                 <div className={i % 2 === 1 ? 'order-1 pr-10' : 'pl-10'}>
                   <div className={`relative mb-4 overflow-hidden ${brand.logoBg}`} style={{ height: brand.logoH ?? 60, width: 240 }}>

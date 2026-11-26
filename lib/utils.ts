@@ -26,14 +26,14 @@ export const CATEGORY_META: Record<
   Render: {
     label: 'Render',
     description:
-      'Premium acrylic and cement-based renders from Euromix, Novatex, Melbacrylic, and Unitex. Base coats, finish renders, skim coats, and primers.',
+      'Premium acrylic and cement-based renders from Euromix, Novatex, MAC Render, and Unitex. Base coats, finish renders, skim coats, and primers.',
     icon: '▪',
     slug: 'render',
   },
   Texture: {
     label: 'Texture',
     description:
-      'Acrylic texture coatings and decorative finishes from Novatex, Euromix, Melbacrylic, and Unitex — trowel-on, roll-on, and polished concrete looks.',
+      'Acrylic texture coatings and decorative finishes from Novatex, Euromix, MAC Render, and Unitex — trowel-on, roll-on, and polished concrete looks.',
     icon: '▪',
     slug: 'texture',
   },
@@ -59,7 +59,7 @@ export const CATEGORY_META: Record<
   },
   Waterproofing: {
     label: 'Waterproofing',
-    description: 'Novatex and Melbacrylic waterproofing membranes, sealants, and joint bands for wet areas and external walls.',
+    description: 'Novatex and MAC Render waterproofing membranes, sealants, and joint bands for wet areas and external walls.',
     icon: '▪',
     slug: 'waterproofing',
   },

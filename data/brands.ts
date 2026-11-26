@@ -14,8 +14,8 @@ export interface Brand {
   shortBlurb: string
   // Key product types CBS carries from this brand
   productTypes: string[]
-  // Link to brand's website
-  websiteUrl: string
+  // Link to brand's website. Leave it out to hide the Brand Site button (client, 26 Nov 2026: none for Astec).
+  websiteUrl?: string
   // Is this an in-house / CBS-owned brand?
   inHouse?: boolean
   // Feature this brand prominently on the Brands page
@@ -75,7 +75,7 @@ export const brands: Brand[] = [
     name: 'Euromix',
     logoPath: '/images/Euromix.webp',
     shortBlurb:
-      'Euromix is an Australian-made and owned manufacturer of premium acrylic-modified cement renders, skim coats, and plasters. Based in Strathfield South NSW, Euromix renders are formulated with specially blended mineral fillers for superior crack resistance, flexibility, and workability. CBS distributes the full Euromix render system — from base coats to skim finishes.',
+      'Euromix specialises in premium rendering and architectural coating solutions designed for the Australian building industry. Its extensive range includes polymer-modified cement renders, acrylic texture coatings, patching compounds, primers and decorative finishes. With purpose-developed systems for a wide variety of substrates, Euromix delivers versatility, durability and professional finish quality.',
     productTypes: [
       'Euromix Render (Multi-Purpose Base)',
       'Euromix 1Render (Single-Coat System)',
@@ -95,7 +95,7 @@ export const brands: Brand[] = [
     name: 'Novatex',
     logoPath: '/images/FINALLOGONOVATEX.webp',
     shortBlurb:
-      'Novatex Products has more than 70 years of history in the Australian building industry. Based in Wetherill Park NSW — just minutes from CBS Villawood — they manufacture adhesives, renders, texture coatings, and waterproofing systems. CBS distributes Novatex\'s key render products including the popular EZ101, ER100, and SPR Acrylic lines alongside their Ezytex texture range.',
+      'NOVATEX delivers Australian-made rendering and coating solutions designed for quality, durability and performance. Its comprehensive range caters to a variety of rendering and surface finishing applications. We proudly stock NOVATEX products to help professionals achieve exceptional results on every project.',
     productTypes: [
       'EZ101 – Modified Cement Render (PFR Technology)',
       'ER100 – Fast Cure Render (PFR Technology)',
@@ -112,11 +112,11 @@ export const brands: Brand[] = [
     logoOnDark: true,
   },
   {
-    id: 'melbacrylic',
-    name: 'Melbacrylic',
-    logoPath: '/images/Mac-Render.webp',
+    id: 'mac-render',
+    name: 'MAC Render',
+    logoPath: '/images/mac-render-logo.webp',
     shortBlurb:
-      'Melbacrylic (MAC) is a specialist manufacturer of cement and acrylic architectural renders and coatings backed by a 7-year manufacturer\'s warranty. Their render selector system makes it easy to match the right product to any substrate. CBS distributes Melbacrylic\'s commercial render range including Macrender HBS (high bond for EPS), Macrender Coarse FR (fibre-reinforced for AAC), and the Supaskim finishing render.',
+      'For more than 30 years, MAC has specialised in advanced cement and acrylic rendering solutions designed to deliver outstanding performance, workability and finish quality. MAC\'s comprehensive range includes purpose-developed systems for EPS. With a range of renders, acrylic textured finishes, membranes, primers and concrete finishes, MAC will have your project covered.',
     productTypes: [
       'Macrender HBS (High Bond Strength, EPS specialist)',
       'Macrender Coarse FR (Fibre Reinforced, AAC specialist)',
@@ -193,7 +193,7 @@ export const brands: Brand[] = [
       'Firewall Skim',
       'Firewall Aggra-Prime',
     ],
-    websiteUrl: 'https://www.wallmasterpaints.com.au/',
+    // No websiteUrl: the client asked for Astec's Brand Site button to be removed (26 Nov 2026).
     inHouse: false,
     featured: true,
   },

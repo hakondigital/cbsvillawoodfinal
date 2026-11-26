@@ -36,7 +36,7 @@ export default function BrandsPage() {
                   {(brand.productsHref || hasProducts(brand.id)) && (
                     <Link href={brand.productsHref ?? `/products?brand=${brand.id}`} className="btn-brand text-[13px]">View Products</Link>
                   )}
-                  <a href={brand.websiteUrl} target="_blank" rel="noopener noreferrer" className="btn-outline-dark text-[13px]">Brand Site</a>
+                  {brand.websiteUrl && <a href={brand.websiteUrl} target="_blank" rel="noopener noreferrer" className="btn-outline-dark text-[13px]">Brand Site</a>}
                 </div>
               </div>
 

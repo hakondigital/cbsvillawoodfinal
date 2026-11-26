@@ -9,7 +9,7 @@ const BRANDS: { name: string; logo: string; bg: string; href: string; external?:
   { name: 'ACE Mouldings', logo: '/images/ace-moulding-logo.webp', bg: '', href: '/products?category=Mouldings' },
   { name: 'Euromix', logo: '/images/Euromix.webp', bg: '', href: '/products?brand=Euromix' },
   { name: 'Novatex', logo: '/images/FINALLOGONOVATEX.webp', bg: '', href: '/products?brand=Novatex' },
-  { name: 'Melbacrylic', logo: '/images/Mac-Render.webp', bg: '', href: '/products?brand=Melbacrylic' },
+  { name: 'MAC Render', logo: '/images/mac-render-logo.webp', bg: '', href: '/products?brand=MAC+Render' },
   { name: 'Unitex', logo: '/images/unitex-logo.svg', bg: '', href: '/products?brand=Unitex' },
   // White artwork — rendered on a dark tile
   { name: 'Builders Emporium', logo: '/images/builders-emporium-logo.svg', bg: 'bg-ink', href: '/products?brand=Builders+Emporium' },

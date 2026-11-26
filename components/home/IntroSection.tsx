@@ -7,7 +7,7 @@ import Link from 'next/link'
 const LOGOS: { src: string; alt: string; dark?: boolean }[] = [
   { src: '/images/ace-logo-orange.webp', alt: 'ACE Polystyrene' },
   { src: '/images/ace-moulding-logo.webp', alt: 'ACE Mouldings' },
-  { src: '/images/Mac-Render.webp', alt: 'Melbacrylic' },
+  { src: '/images/mac-render-logo.webp', alt: 'MAC Render' },
   { src: '/images/FINALLOGONOVATEX.webp', alt: 'Novatex' },
   { src: '/images/Euromix.webp', alt: 'Euromix' },
   { src: '/images/unitex-logo.svg', alt: 'Unitex' },

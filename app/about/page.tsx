@@ -121,7 +121,7 @@ export default function AboutPage() {
               },
               {
                 title: 'Render Systems',
-                desc: 'Full render systems from Euromix, Novatex, Melbacrylic, and Unitex. Base coats, skim coats, polymer renders, texture coatings, primers, and admixtures.',
+                desc: 'Full render systems from Euromix, Novatex, MAC Render, and Unitex. Base coats, skim coats, polymer renders, texture coatings, primers, and admixtures.',
                 image: '/images/villawood-render-pallets.webp',
               },
               {
@@ -187,7 +187,7 @@ export default function AboutPage() {
                 desc: '70+ years in the Australian building industry. EZ101 and ER100 render lines, SPR Acrylic smooth polymer, Valencia and Saturn texture coatings, and the Ezytex skim range.',
               },
               {
-                name: 'Melbacrylic', logo: '/images/Mac-Render.webp', logoBg: '',
+                name: 'MAC Render', logo: '/images/mac-render-logo.webp', logoBg: '',
                 desc: 'Specialist cement and acrylic renders with a 7-year manufacturer\u2019s warranty. Macrender HBS for EPS, Coarse FR for AAC, general purpose, and Supaskim finishing render.',
               },
               {
@@ -230,7 +230,7 @@ export default function AboutPage() {
               </p>
               <p>
                 <strong>Four render systems, one supplier.</strong> Instead of driving to four
-                different suppliers to compare Euromix, Novatex, Melbacrylic, and Unitex, you come to
+                different suppliers to compare Euromix, Novatex, MAC Render, and Unitex, you come to
                 CBS and spec the right system for your substrate and application. Our team can
                 walk you through the differences and recommend the best product for your job.
               </p>
@@ -254,7 +254,7 @@ export default function AboutPage() {
       {/* Gallery */}
       <div className="grid grid-cols-2 lg:grid-cols-4" style={{ gap: 0 }}>
         {[
-          { src: '/images/villawood-macbond-additives.webp', l: 'Melbacrylic' },
+          { src: '/images/villawood-macbond-additives.webp', l: 'MAC Render' },
           { src: '/images/villawood-mesh-angles.webp', l: 'Mesh & Angles' },
           { src: '/images/villawood-mesh-rack.webp', l: 'Render Mesh' },
           { src: '/images/ace-panels-installed.webp', l: 'ACE Panels On Site' },

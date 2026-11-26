@@ -7,7 +7,7 @@
 //   - acepolystyrene.com.au (Foam → ACE brand)
 //   - euromix.com.au (Render → Euromix brand)
 //   - novatexproducts.com.au (Render → Novatex brand)
-//   - melbacrylic.com.au (Render → Melbacrylic brand)
+//   - melbacrylic.com.au (Render → MAC Render brand)
 //   - centralbuildingsupplies.com.au (Tools, Accessories, Mouldings)
 //   - buildersemporium.com.au (Angles, Mesh, Accessories → Builders Emporium brand)
 //   - unitex.com.au (Render, Texture → Unitex brand; base coat renders + textures and finishes only)
@@ -30,7 +30,7 @@ export type ProductBrand =
   | 'ACE'
   | 'Novatex'
   | 'Euromix'
-  | 'Melbacrylic'
+  | 'MAC Render'
   | 'Astec'
   | 'Builders Emporium'
   | 'Unitex'
@@ -251,7 +251,7 @@ const foamProducts: Product[] = [
 ]
 
 // =============================================================================
-// RENDER – Euromix, Novatex, Melbacrylic
+// RENDER – Euromix, Novatex, MAC Render
 // =============================================================================
 
 const renderProducts: Product[] = [
@@ -569,12 +569,12 @@ const renderProducts: Product[] = [
   { id: 'novatex-fine-skim', name: 'Novatex Insulclad Fine Skim', category: 'Render', brand: 'Novatex', shortDescription: 'Polymer modified cement based finishing render for the Insulclad exterior insulated wall system. Fine granular texture for modern construction.', features: ['Fine, subtle granular texture finish', 'Insulclad exterior insulated wall system', 'Modern and traditional construction'], application: 'Finish coat on Insulclad, blue board, Hebel, brick, blockwork, and masonry substrates.', badges: ['System Product'], externalLink: 'https://novatexproducts.com.au/products/fine-skim/', imagePath: '/images/products/novatex-fine-skim.webp' },
   { id: 'novatex-tint-n-prime', name: 'Novatex Tint N Prime', category: 'Render', brand: 'Novatex', shortDescription: 'High performance acrylic tintable primer designed to seal and prime all clean masonry surfaces. Tint to match final coat colour.', features: ['Tintable formulation', 'Excellent adhesion', 'Superior coverage', 'Good hiding power'], application: 'Sealing and priming clean masonry surfaces with tint additions.', badges: ['System Product'], externalLink: 'https://novatexproducts.com.au/products/tint-n-prime/', imagePath: '/images/products/novatex-tint-n-prime.webp' },
 
-  // --- MELBACRYLIC RENDERS ---
+  // --- MAC RENDER RENDERS ---
   {
     id: 'mac-macrender-hbs',
-    name: 'Melbacrylic Macrender HBS',
+    name: 'MAC Macrender HBS',
     category: 'Render',
-    brand: 'Melbacrylic',
+    brand: 'MAC Render',
     shortDescription: 'Medium grade high bond strength render for application to demanding surfaces. Highly polymer modified cementitious plaster especially suited to EPS and low-porosity surfaces.',
     features: ['High polymer content for exceptional bond strength', 'Designed for EPS and low-porosity surfaces', 'Medium grade with good workability', 'Ideal base for MAC architectural finish systems', 'AS1530.1 Non-Combustible certified', '20kg bag (60 per pallet)'],
     specs: [{ label: 'Grade', value: 'Medium' }, { label: 'Key feature', value: 'High bond strength to EPS and low-porosity substrates' }, { label: 'Pack size', value: '20kg bag' }, { label: 'Fire certification', value: 'AS1530.1 Non-Combustible' }],
@@ -586,9 +586,9 @@ const renderProducts: Product[] = [
   },
   {
     id: 'mac-macrender-coarse-fr',
-    name: 'Melbacrylic Macrender Coarse FR',
+    name: 'MAC Macrender Coarse FR',
     category: 'Render',
-    brand: 'Melbacrylic',
+    brand: 'MAC Render',
     shortDescription: 'Medium grade render with synthetic fibre reinforcement for AAC constructions. Polymer modified cement based plaster suitable for many rendering and patching applications.',
     features: ['Fibre reinforcement for crack resistance', 'Polymer-modified cementitious formulation', 'Specifically suited to AAC blocks and panels', 'Good bond strength with minimal shrinkage', 'AS1530.1 Non-Combustible certified', '20kg bag (60 per pallet)'],
     specs: [{ label: 'Grade', value: 'Medium (fibre reinforced)' }, { label: 'Key substrates', value: 'AAC blocks and panels, stable porous masonry' }, { label: 'Pack size', value: '20kg bag' }, { label: 'Fire certification', value: 'AS1530.1 Non-Combustible' }],
@@ -599,9 +599,9 @@ const renderProducts: Product[] = [
   },
   {
     id: 'mac-macrender',
-    name: 'Melbacrylic Macrender (Standard)',
+    name: 'MAC Macrender (Standard)',
     category: 'Render',
-    brand: 'Melbacrylic',
+    brand: 'MAC Render',
     shortDescription: 'Medium grade general purpose render for application to stable masonry based surfaces with sufficient porosity. Just add water — no site batching required.',
     features: ['Just add water — no site batching', 'Good bond strength and minimal shrinkage', 'Medium grade for versatile application', 'Ideal base for MAC acrylic and cement-based finishes', 'AS1530.1 Non-Combustible certified', '20kg bag (60 per pallet)'],
     specs: [{ label: 'Grade', value: 'Medium' }, { label: 'Mix', value: 'Water only' }, { label: 'Pack size', value: '20kg bag (60 per pallet)' }, { label: 'Fire certification', value: 'AS1530.1 Non-Combustible' }],
@@ -612,9 +612,9 @@ const renderProducts: Product[] = [
   },
   {
     id: 'mac-macrender-coarse',
-    name: 'Melbacrylic Macrender Coarse',
+    name: 'MAC Macrender Coarse',
     category: 'Render',
-    brand: 'Melbacrylic',
+    brand: 'MAC Render',
     shortDescription: 'Coarse grade general purpose render for application to stable masonry based surfaces with sufficient porosity.',
     features: ['Coarse grade', 'General purpose polymer render', 'For stable porous masonry', 'AS1530.1 Non-Combustible certified', '20kg bag'],
     specs: [{ label: 'Grade', value: 'Coarse' }, { label: 'Pack size', value: '20kg bag' }, { label: 'Fire certification', value: 'AS1530.1 Non-Combustible' }],
@@ -625,9 +625,9 @@ const renderProducts: Product[] = [
   },
   {
     id: 'mac-supaskim',
-    name: 'Melbacrylic Supaskim',
+    name: 'MAC Render Supaskim',
     category: 'Render',
-    brand: 'Melbacrylic',
+    brand: 'MAC Render',
     shortDescription: 'Fine grade general purpose render for application to stable masonry based surfaces with sufficient porosity. Ideal for sponge finishing prior to painting.',
     features: ['Fine grade for smooth sponge finish', 'General purpose polymer render', 'Ideal base for painting systems', 'AS1530.1 Non-Combustible certified', '20kg bag'],
     specs: [{ label: 'Grade', value: 'Fine' }, { label: 'Finish', value: 'Sponge finish' }, { label: 'Pack size', value: '20kg bag' }, { label: 'Fire certification', value: 'AS1530.1 Non-Combustible' }],
@@ -638,9 +638,9 @@ const renderProducts: Product[] = [
   },
   {
     id: 'mac-hi-build',
-    name: 'Melbacrylic Hi-Build',
+    name: 'MAC Render Hi-Build',
     category: 'Render',
-    brand: 'Melbacrylic',
+    brand: 'MAC Render',
     shortDescription: 'Coarse grade lightweight render for thick section application. Designed for high-build applications where greater render thickness is required.',
     features: ['Coarse grade', 'Lightweight formulation', 'Thick section application', 'Reduced load on structure', 'AS1530.1 Non-Combustible certified'],
     specs: [{ label: 'Grade', value: 'Coarse (lightweight)' }, { label: 'Key feature', value: 'High-build thick section' }, { label: 'Fire certification', value: 'AS1530.1 Non-Combustible' }],
@@ -651,9 +651,9 @@ const renderProducts: Product[] = [
   },
   {
     id: 'mac-dri-patch',
-    name: 'Melbacrylic Dri-Patch',
+    name: 'MAC Render Dri-Patch',
     category: 'Render',
-    brand: 'Melbacrylic',
+    brand: 'MAC Render',
     shortDescription: 'Fine grade high polymer render for application to low-porosity surfaces. Also functions as an economical dry-mix jointing and skim-coating compound for fibre-cement sheet.',
     features: ['Fine grade', 'High polymer content', 'For low-porosity surfaces', 'Also works as jointing/skim compound', 'For fibre-cement sheet and painted surfaces'],
     application: 'Render on low-porosity surfaces; jointing and skim coating on fibre-cement base sheet.',
@@ -663,9 +663,9 @@ const renderProducts: Product[] = [
   },
   {
     id: 'mac-macpatch-coarse',
-    name: 'Melbacrylic Macpatch Coarse',
+    name: 'MAC Macpatch Coarse',
     category: 'Render',
-    brand: 'Melbacrylic',
+    brand: 'MAC Render',
     shortDescription: 'Medium grade pre-mixed polymer render for application to difficult surfaces. Use over previously painted masonry surfaces and fibre-cement base sheet.',
     features: ['Medium grade', 'Pre-mixed acrylic polymer', 'For difficult surfaces and painted masonry', 'Joint stopping and skim coating', 'For fibre-cement sheet'],
     application: 'Pre-mixed render on painted masonry, fibre-cement base sheet, and difficult substrates.',
@@ -675,9 +675,9 @@ const renderProducts: Product[] = [
   },
   {
     id: 'mac-polylite',
-    name: 'Melbacrylic Polylite',
+    name: 'MAC Render Polylite',
     category: 'Render',
-    brand: 'Melbacrylic',
+    brand: 'MAC Render',
     shortDescription: 'Lightweight polymer render for EPS cladding systems. Formulated for application over polystyrene panel substrates with reduced structural load.',
     features: ['Lightweight formulation', 'For EPS cladding systems', 'Polymer modified', 'Reduced structural load', 'AS1530.1 Non-Combustible certified'],
     specs: [{ label: 'Key feature', value: 'Lightweight for EPS systems' }, { label: 'Fire certification', value: 'AS1530.1 Non-Combustible' }],
@@ -689,7 +689,7 @@ const renderProducts: Product[] = [
 ]
 
 // =============================================================================
-// TEXTURE COATINGS – Melbacrylic (buckets)
+// TEXTURE COATINGS – MAC Render (buckets)
 // =============================================================================
 
 const textureProducts: Product[] = [
@@ -701,23 +701,23 @@ const textureProducts: Product[] = [
   { id: 'euromix-finecoat', name: 'Euromix Fine Coat', category: 'Texture', brand: 'Euromix', shortDescription: 'Fine textured architectural coating for smooth decorative finishes on interior and exterior surfaces.', features: ['Fine texture finish', 'Architectural coating', 'Interior and exterior use'], application: 'Fine textured coating for smooth decorative finish on rendered surfaces.', badges: ['System Product'], externalLink: 'https://euromix.com.au/textures-and-coatings/euromix-finecoat/', imagePath: '/images/products/euromix-finecoat.webp' },
   { id: 'euromix-quartz-texture', name: 'Euromix Quartz Texture', category: 'Texture', brand: 'Euromix', shortDescription: 'Quartz-based textured architectural coating for durable decorative finishes on rendered surfaces.', features: ['Quartz-based texture', 'Durable decorative finish', 'Architectural coating'], application: 'Quartz textured coating for durable decorative finishes on rendered surfaces.', badges: ['System Product'], externalLink: 'https://euromix.com.au/textures-and-coatings/euromix-quartz-texture/', imagePath: '/images/products/euromix-sandstone-texture.webp' },
   { id: 'euromix-sandfinish-texture', name: 'Euromix Sand Finish Texture', category: 'Texture', brand: 'Euromix', shortDescription: 'Sand finish textured architectural coating for natural-looking decorative finishes on interior and exterior surfaces.', features: ['Sand finish texture', 'Natural-looking decorative finish', 'Interior and exterior use'], application: 'Sand finish textured coating for natural decorative appearance on rendered surfaces.', badges: ['System Product'], externalLink: 'https://euromix.com.au/textures-and-coatings/euromix-sandfinish-texture/', imagePath: '/images/products/euromix-sandfinish-texture.webp' },
-  // --- MELBACRYLIC TEXTURES (buckets) ---
-  { id: 'mac-vernazzo', name: 'Melbacrylic Vernazzo', category: 'Texture', brand: 'Melbacrylic', shortDescription: 'Acrylic polymer based concrete finish providing flexibility and weather resistance. Trowel-applied in multiple colours for a modern concrete aesthetic.', features: ['Acrylic polymer based', 'Concrete look finish', 'Trowel applied', 'Flexible and weather resistant', 'Multiple colour options'], application: 'Decorative concrete-look finish on rendered facades.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/vernazzo', imagePath: '/images/products/mac-vernazzo.webp' },
-  { id: 'mac-corfu-plus', name: 'Melbacrylic Corfu Plus', category: 'Texture', brand: 'Melbacrylic', shortDescription: 'Medium aggregate acrylic wall finish formulated for trowel application with improved water beading properties to resist dirt accumulation.', features: ['Medium aggregate', 'Trowel applied', 'Water beading properties', 'Dirt resistant', 'Extensive colour range'], application: 'Trowel-applied textured finish on cured render systems.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/corfu-plus', imagePath: '/images/products/mac-corfu-plus.webp' },
-  { id: 'mac-3060-sandstone', name: 'Melbacrylic 3060 Sandstone', category: 'Texture', brand: 'Melbacrylic', shortDescription: 'Fine grade trowel-applied acrylic textured finish available in an extensive colour range.', features: ['Fine grade', 'Trowel applied', 'Acrylic textured finish', 'Extensive colour range'], application: 'Fine-textured decorative finish on rendered facades.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/3060-sandstone', imagePath: '/images/products/mac-3060-sandstone.webp' },
-  { id: 'mac-1140-sandfinish', name: 'Melbacrylic 1140 Sandfinish', category: 'Texture', brand: 'Melbacrylic', shortDescription: 'Medium grade trowel-applied acrylic textured finish with broad colour availability for rendered facades.', features: ['Medium grade', 'Trowel applied', 'Broad colour range', 'Acrylic textured finish'], application: 'Medium-textured decorative finish on rendered facades.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/1140-sandfinish', imagePath: '/images/products/mac-1140-sandfinish.webp' },
-  { id: 'mac-crystal-plus', name: 'Melbacrylic Crystal Plus', category: 'Texture', brand: 'Melbacrylic', shortDescription: 'Medium grade natural sand-based acrylic textured finish in an extensive colour range.', features: ['Medium grade', 'Natural sand-based', 'Acrylic textured finish', 'Extensive colour range'], application: 'Natural sand textured finish on cured render systems.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/crystal', imagePath: '/images/products/mac-crystal-plus.webp' },
-  { id: 'mac-trowel-1mm', name: 'Melbacrylic 1mm Trowel-On', category: 'Texture', brand: 'Melbacrylic', shortDescription: 'Medium grade trowel-applied acrylic scratch finish available in extensive colours.', features: ['1mm aggregate', 'Trowel applied', 'Scratch finish', 'Extensive colours'], application: '1mm scratch-finish decorative coat on rendered facades.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/1mm-trowel', imagePath: '/images/products/mac-trowel-1mm.webp' },
-  { id: 'mac-trowel-2mm', name: 'Melbacrylic 2mm Trowel-On', category: 'Texture', brand: 'Melbacrylic', shortDescription: 'Coarse grade trowel-applied acrylic scratch finish in multiple colour options.', features: ['2mm aggregate', 'Coarse grade', 'Trowel applied', 'Scratch finish', 'Multiple colours'], application: '2mm scratch-finish decorative coat on rendered facades.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/2mm-trowel', imagePath: '/images/products/mac-trowel-2mm.webp' },
-  { id: 'mac-satin', name: 'Melbacrylic Satin Membrane', category: 'Texture', brand: 'Melbacrylic', shortDescription: '100% acrylic premium grade paint formulated for application to renders and acrylic textured coatings.', features: ['100% acrylic', 'Premium grade', 'For renders and textured coatings', 'Roll-on application'], application: 'Protective roll-on membrane over cured render and texture coatings.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/satin', imagePath: '/images/products/mac-satin.webp' },
-  { id: 'mac-satin-flex', name: 'Melbacrylic Satin Flex', category: 'Texture', brand: 'Melbacrylic', shortDescription: 'Flexible roll-on acrylic membrane for renders and textured coatings. Provides crack-bridging elastomeric protection.', features: ['Flexible elastomeric', 'Roll-on application', 'Crack bridging', 'For renders and textured coatings'], application: 'Elastomeric protective membrane over cured render and texture coatings.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/satin-flex', imagePath: '/images/products/mac-satin.webp' },
-  { id: 'mac-rustic', name: 'Melbacrylic Rustic Roll-on', category: 'Texture', brand: 'Melbacrylic', shortDescription: 'Fine grade roller-applied acrylic textured coating for renders and masonry surfaces.', features: ['Fine grade', 'Roller applied', 'Acrylic textured coating', 'For renders and masonry'], application: 'Roller-applied fine texture on rendered and masonry facades.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/rustic', imagePath: '/images/products/mac-rustic.webp' },
-  { id: 'mac-tuscan', name: 'Melbacrylic Tuscan Roll-on', category: 'Texture', brand: 'Melbacrylic', shortDescription: 'Coarse grade roller-applied acrylic textured coating designed for renders and masonry.', features: ['Coarse grade', 'Roller applied', 'Acrylic textured coating', 'For renders and masonry'], application: 'Roller-applied coarse texture on rendered and masonry facades.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/tuscan', imagePath: '/images/products/mac-tuscan.webp' },
-  { id: 'mac-suede', name: 'Melbacrylic Suede FC', category: 'Texture', brand: 'Melbacrylic', shortDescription: 'Ultrafine cement-based fairing coat providing a smooth, natural concrete appearance.', features: ['Ultrafine grade', 'Cement based', 'Natural concrete look', 'Smooth fairing coat'], application: 'Smooth concrete-look fairing coat on rendered facades.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/suede', imagePath: '/images/products/mac-suede.webp' },
-  { id: 'mac-dri-tex', name: 'Melbacrylic Dri-Tex', category: 'Texture', brand: 'Melbacrylic', shortDescription: 'Cement based textured finish available in natural white or custom colours.', features: ['Cement based', 'Textured finish', 'Natural white or custom colours'], application: 'Cement-based textured finish on rendered surfaces.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/dritex', imagePath: '/images/products/mac-dri-tex.webp' },
-  { id: 'mac-treviso', name: 'Melbacrylic Treviso', category: 'Texture', brand: 'Melbacrylic', shortDescription: 'Premium acrylic textured finish coat for contemporary rendered facades.', features: ['Premium quality', 'Acrylic textured finish', 'Contemporary aesthetic'], application: 'Premium decorative textured finish on modern rendered facades.', badges: ['System Product', 'New'], externalLink: 'http://www.melbacrylic.com.au/treviso', imagePath: '/images/products/mac-vernazzo.webp' },
-  { id: 'mac-aquashield', name: 'Melbacrylic Aquashield', category: 'Texture', brand: 'Melbacrylic', shortDescription: 'Protective acrylic sealer and shield coat for rendered and textured surfaces.', features: ['Protective sealer', 'Shield coat', 'For rendered and textured surfaces'], application: 'Protective sealer over cured render and texture coatings.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/aquashield', imagePath: '/images/products/mac-satin.webp' },
-  { id: 'mac-glaze', name: 'Melbacrylic Glaze', category: 'Texture', brand: 'Melbacrylic', shortDescription: 'Clear acrylic glaze finish for rendered and textured surfaces.', features: ['Clear acrylic', 'Glaze finish', 'For rendered and textured surfaces'], application: 'Clear protective glaze over decorative textured finishes.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/glaze', imagePath: '/images/products/mac-satin.webp' },
+  // --- MAC RENDER TEXTURES (buckets) ---
+  { id: 'mac-vernazzo', name: 'MAC Render Vernazzo', category: 'Texture', brand: 'MAC Render', shortDescription: 'Acrylic polymer based concrete finish providing flexibility and weather resistance. Trowel-applied in multiple colours for a modern concrete aesthetic.', features: ['Acrylic polymer based', 'Concrete look finish', 'Trowel applied', 'Flexible and weather resistant', 'Multiple colour options'], application: 'Decorative concrete-look finish on rendered facades.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/vernazzo', imagePath: '/images/products/mac-vernazzo.webp' },
+  { id: 'mac-corfu-plus', name: 'MAC Render Corfu Plus', category: 'Texture', brand: 'MAC Render', shortDescription: 'Medium aggregate acrylic wall finish formulated for trowel application with improved water beading properties to resist dirt accumulation.', features: ['Medium aggregate', 'Trowel applied', 'Water beading properties', 'Dirt resistant', 'Extensive colour range'], application: 'Trowel-applied textured finish on cured render systems.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/corfu-plus', imagePath: '/images/products/mac-corfu-plus.webp' },
+  { id: 'mac-3060-sandstone', name: 'MAC Render 3060 Sandstone', category: 'Texture', brand: 'MAC Render', shortDescription: 'Fine grade trowel-applied acrylic textured finish available in an extensive colour range.', features: ['Fine grade', 'Trowel applied', 'Acrylic textured finish', 'Extensive colour range'], application: 'Fine-textured decorative finish on rendered facades.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/3060-sandstone', imagePath: '/images/products/mac-3060-sandstone.webp' },
+  { id: 'mac-1140-sandfinish', name: 'MAC Render 1140 Sandfinish', category: 'Texture', brand: 'MAC Render', shortDescription: 'Medium grade trowel-applied acrylic textured finish with broad colour availability for rendered facades.', features: ['Medium grade', 'Trowel applied', 'Broad colour range', 'Acrylic textured finish'], application: 'Medium-textured decorative finish on rendered facades.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/1140-sandfinish', imagePath: '/images/products/mac-1140-sandfinish.webp' },
+  { id: 'mac-crystal-plus', name: 'MAC Render Crystal Plus', category: 'Texture', brand: 'MAC Render', shortDescription: 'Medium grade natural sand-based acrylic textured finish in an extensive colour range.', features: ['Medium grade', 'Natural sand-based', 'Acrylic textured finish', 'Extensive colour range'], application: 'Natural sand textured finish on cured render systems.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/crystal', imagePath: '/images/products/mac-crystal-plus.webp' },
+  { id: 'mac-trowel-1mm', name: 'MAC Render 1mm Trowel-On', category: 'Texture', brand: 'MAC Render', shortDescription: 'Medium grade trowel-applied acrylic scratch finish available in extensive colours.', features: ['1mm aggregate', 'Trowel applied', 'Scratch finish', 'Extensive colours'], application: '1mm scratch-finish decorative coat on rendered facades.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/1mm-trowel', imagePath: '/images/products/mac-trowel-1mm.webp' },
+  { id: 'mac-trowel-2mm', name: 'MAC Render 2mm Trowel-On', category: 'Texture', brand: 'MAC Render', shortDescription: 'Coarse grade trowel-applied acrylic scratch finish in multiple colour options.', features: ['2mm aggregate', 'Coarse grade', 'Trowel applied', 'Scratch finish', 'Multiple colours'], application: '2mm scratch-finish decorative coat on rendered facades.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/2mm-trowel', imagePath: '/images/products/mac-trowel-2mm.webp' },
+  { id: 'mac-satin', name: 'MAC Render Satin Membrane', category: 'Texture', brand: 'MAC Render', shortDescription: '100% acrylic premium grade paint formulated for application to renders and acrylic textured coatings.', features: ['100% acrylic', 'Premium grade', 'For renders and textured coatings', 'Roll-on application'], application: 'Protective roll-on membrane over cured render and texture coatings.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/satin', imagePath: '/images/products/mac-satin.webp' },
+  { id: 'mac-satin-flex', name: 'MAC Render Satin Flex', category: 'Texture', brand: 'MAC Render', shortDescription: 'Flexible roll-on acrylic membrane for renders and textured coatings. Provides crack-bridging elastomeric protection.', features: ['Flexible elastomeric', 'Roll-on application', 'Crack bridging', 'For renders and textured coatings'], application: 'Elastomeric protective membrane over cured render and texture coatings.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/satin-flex', imagePath: '/images/products/mac-satin.webp' },
+  { id: 'mac-rustic', name: 'MAC Render Rustic Roll-on', category: 'Texture', brand: 'MAC Render', shortDescription: 'Fine grade roller-applied acrylic textured coating for renders and masonry surfaces.', features: ['Fine grade', 'Roller applied', 'Acrylic textured coating', 'For renders and masonry'], application: 'Roller-applied fine texture on rendered and masonry facades.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/rustic', imagePath: '/images/products/mac-rustic.webp' },
+  { id: 'mac-tuscan', name: 'MAC Render Tuscan Roll-on', category: 'Texture', brand: 'MAC Render', shortDescription: 'Coarse grade roller-applied acrylic textured coating designed for renders and masonry.', features: ['Coarse grade', 'Roller applied', 'Acrylic textured coating', 'For renders and masonry'], application: 'Roller-applied coarse texture on rendered and masonry facades.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/tuscan', imagePath: '/images/products/mac-tuscan.webp' },
+  { id: 'mac-suede', name: 'MAC Render Suede FC', category: 'Texture', brand: 'MAC Render', shortDescription: 'Ultrafine cement-based fairing coat providing a smooth, natural concrete appearance.', features: ['Ultrafine grade', 'Cement based', 'Natural concrete look', 'Smooth fairing coat'], application: 'Smooth concrete-look fairing coat on rendered facades.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/suede', imagePath: '/images/products/mac-suede.webp' },
+  { id: 'mac-dri-tex', name: 'MAC Render Dri-Tex', category: 'Texture', brand: 'MAC Render', shortDescription: 'Cement based textured finish available in natural white or custom colours.', features: ['Cement based', 'Textured finish', 'Natural white or custom colours'], application: 'Cement-based textured finish on rendered surfaces.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/dritex', imagePath: '/images/products/mac-dri-tex.webp' },
+  { id: 'mac-treviso', name: 'MAC Render Treviso', category: 'Texture', brand: 'MAC Render', shortDescription: 'Premium acrylic textured finish coat for contemporary rendered facades.', features: ['Premium quality', 'Acrylic textured finish', 'Contemporary aesthetic'], application: 'Premium decorative textured finish on modern rendered facades.', badges: ['System Product', 'New'], externalLink: 'http://www.melbacrylic.com.au/treviso', imagePath: '/images/products/mac-vernazzo.webp' },
+  { id: 'mac-aquashield', name: 'MAC Render Aquashield', category: 'Texture', brand: 'MAC Render', shortDescription: 'Protective acrylic sealer and shield coat for rendered and textured surfaces.', features: ['Protective sealer', 'Shield coat', 'For rendered and textured surfaces'], application: 'Protective sealer over cured render and texture coatings.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/aquashield', imagePath: '/images/products/mac-satin.webp' },
+  { id: 'mac-glaze', name: 'MAC Render Glaze', category: 'Texture', brand: 'MAC Render', shortDescription: 'Clear acrylic glaze finish for rendered and textured surfaces.', features: ['Clear acrylic', 'Glaze finish', 'For rendered and textured surfaces'], application: 'Clear protective glaze over decorative textured finishes.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/glaze', imagePath: '/images/products/mac-satin.webp' },
 ]
 
 // =============================================================================
@@ -925,16 +925,16 @@ const accessoriesProducts: Product[] = [
   },
   {
     id: 'macbond-admixture',
-    name: 'Melbacrylic Macbond Admixture',
+    name: 'MAC Macbond Admixture',
     category: 'Render',
-    brand: 'Melbacrylic',
+    brand: 'MAC Render',
     shortDescription:
       'Polymer admixture added to cement-based render mixes to improve tensile adhesion and flexibility. Used where extra bond strength is required on difficult substrates.',
     features: [
       'Acrylic polymer admixture',
       'Improves tensile adhesion of cement renders',
       'Adds flexibility to cementitious mixes',
-      'Used in conjunction with Melbacrylic renders',
+      'Used in conjunction with MAC Render renders',
       'Particularly useful on difficult substrates',
     ],
     application: 'Added to base render mixes on difficult or low-porosity substrates requiring extra adhesion.',
@@ -972,12 +972,12 @@ const accessoriesProducts: Product[] = [
   { id: 'novatex-forza-fc-50', name: 'Novatex Forza FC 50', category: 'Waterproofing', brand: 'Novatex', shortDescription: 'High-performance one-component polyurethane adhesive/sealant. Permanently flexible, bonds and seals simultaneously.', features: ['One-component polyurethane', 'Permanently flexible', 'Bonds and seals simultaneously', 'Non-sag', 'Fast drying'], application: 'Bonding and sealing metals, painted surfaces, PVC, and rigid plastics.', badges: ['System Product'], externalLink: 'https://novatexproducts.com.au/products/forza-fc-50/', imagePath: '/images/products/novatex-forza-fc-50.webp' },
   { id: 'novatex-elasto-joint-band', name: 'Novatex Elasto Series Joint Band', category: 'Waterproofing', brand: 'Novatex', shortDescription: 'Waterproofing joint bands, pre-fabricated corners, and pipe collars with enhanced elastic recovery and high tensile properties.', features: ['Enhanced elastic recovery', 'High tensile', 'Pre-fabricated corners and collars', 'Internal and external', 'Solvent-free'], application: 'Waterproofing bond breakers, pipe sealing, joint reinforcement.', badges: ['System Product'], externalLink: 'https://novatexproducts.com.au/products/elasto-series-joint-band/', imagePath: '/images/products/novatex-elasto-series-joint-band.webp' },
   { id: 'novatex-novarapid', name: 'Novatex NovaRapid', category: 'Accessories', brand: 'Novatex', shortDescription: 'Calcium Chloride based liquid accelerator for cement based products. Makes renders, adhesives, and grouts set and develop strength faster.', features: ['Accelerates cement-based curing', 'For Novatex tile adhesives, grouts, and renders', 'Liquid format'], application: 'Accelerating setting times for Novatex cement-based products.', badges: ['System Product'], externalLink: 'https://novatexproducts.com.au/products/novarapid/', imagePath: '/images/products/novatex-novarapid.webp' },
-  // --- MELBACRYLIC BASE PREP ---
-  { id: 'mac-pro-prime', name: 'Melbacrylic Pro-Prime', category: 'Render', brand: 'Melbacrylic', shortDescription: 'A gritty, highly water resistant acrylic based primer formulated for application to smooth, dense and low porosity surfaces. Creates a bonding key for subsequent render coats.', features: ['Gritty finish for mechanical key', 'Highly water resistant', 'For smooth, dense and low porosity surfaces', 'Acrylic based formulation'], application: 'Prime coat on smooth concrete, tilt-up panels, and low-porosity substrates prior to rendering.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/proprime', imagePath: '/images/products/mac-pro-prime.webp' },
-  { id: 'mac-macprime', name: 'Melbacrylic Macprime', category: 'Render', brand: 'Melbacrylic', shortDescription: 'A tintable acrylic based masonry primer formulated for use on porous surfaces prior to the application of decorative textured finish coats.', features: ['Tintable formulation', 'For porous masonry surfaces', 'Acrylic based', 'Prepares surface for textured finishes'], application: 'Primer for porous masonry surfaces before applying decorative textured coatings.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/macprime', imagePath: '/images/products/mac-macprime.webp' },
-  { id: 'mac-macprime-hp', name: 'Melbacrylic Macprime HP', category: 'Render', brand: 'Melbacrylic', shortDescription: 'A low viscosity, highly water resistant acrylic based masonry primer formulated for penetration into high and low porosity surfaces.', features: ['Low viscosity for deep penetration', 'Highly water resistant', 'Suits both high and low porosity surfaces', 'Acrylic based'], application: 'Deep-penetrating primer for variable-porosity masonry prior to rendering.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/macprime-hp', imagePath: '/images/products/mac-macprime-hp.webp' },
-  { id: 'mac-macpatch-fine', name: 'Melbacrylic Macpatch Fine', category: 'Render', brand: 'Melbacrylic', shortDescription: 'A low-shrink, highly flexible acrylic patching compound for setting rebated joints in fibre-cement base sheet constructions.', features: ['Low shrinkage', 'Highly flexible', 'For rebated joints in fibre-cement sheet', 'Acrylic patching compound'], application: 'Joint patching and skim coating on fibre-cement base sheet.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/macpatch-fine', imagePath: '/images/products/mac-macpatch-fine.webp' },
-  { id: 'mac-wpm440', name: 'Melbacrylic WPM-440', category: 'Waterproofing', brand: 'Melbacrylic', shortDescription: 'A premium grade, highly flexible, one-part Class III water based waterproofing membrane suitable for internal and external wet areas.', features: ['Class III waterproofing membrane', 'One-part application', 'Highly flexible', 'Internal and external wet areas', 'Water based'], application: 'Waterproofing membrane for wet areas, balconies, and external applications.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/wpm440', imagePath: '/images/products/mac-wpm440.webp' },
+  // --- MAC RENDER BASE PREP ---
+  { id: 'mac-pro-prime', name: 'MAC Render Pro-Prime', category: 'Render', brand: 'MAC Render', shortDescription: 'A gritty, highly water resistant acrylic based primer formulated for application to smooth, dense and low porosity surfaces. Creates a bonding key for subsequent render coats.', features: ['Gritty finish for mechanical key', 'Highly water resistant', 'For smooth, dense and low porosity surfaces', 'Acrylic based formulation'], application: 'Prime coat on smooth concrete, tilt-up panels, and low-porosity substrates prior to rendering.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/proprime', imagePath: '/images/products/mac-pro-prime.webp' },
+  { id: 'mac-macprime', name: 'MAC Macprime', category: 'Render', brand: 'MAC Render', shortDescription: 'A tintable acrylic based masonry primer formulated for use on porous surfaces prior to the application of decorative textured finish coats.', features: ['Tintable formulation', 'For porous masonry surfaces', 'Acrylic based', 'Prepares surface for textured finishes'], application: 'Primer for porous masonry surfaces before applying decorative textured coatings.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/macprime', imagePath: '/images/products/mac-macprime.webp' },
+  { id: 'mac-macprime-hp', name: 'MAC Macprime HP', category: 'Render', brand: 'MAC Render', shortDescription: 'A low viscosity, highly water resistant acrylic based masonry primer formulated for penetration into high and low porosity surfaces.', features: ['Low viscosity for deep penetration', 'Highly water resistant', 'Suits both high and low porosity surfaces', 'Acrylic based'], application: 'Deep-penetrating primer for variable-porosity masonry prior to rendering.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/macprime-hp', imagePath: '/images/products/mac-macprime-hp.webp' },
+  { id: 'mac-macpatch-fine', name: 'MAC Macpatch Fine', category: 'Render', brand: 'MAC Render', shortDescription: 'A low-shrink, highly flexible acrylic patching compound for setting rebated joints in fibre-cement base sheet constructions.', features: ['Low shrinkage', 'Highly flexible', 'For rebated joints in fibre-cement sheet', 'Acrylic patching compound'], application: 'Joint patching and skim coating on fibre-cement base sheet.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/macpatch-fine', imagePath: '/images/products/mac-macpatch-fine.webp' },
+  { id: 'mac-wpm440', name: 'MAC Render WPM-440', category: 'Waterproofing', brand: 'MAC Render', shortDescription: 'A premium grade, highly flexible, one-part Class III water based waterproofing membrane suitable for internal and external wet areas.', features: ['Class III waterproofing membrane', 'One-part application', 'Highly flexible', 'Internal and external wet areas', 'Water based'], application: 'Waterproofing membrane for wet areas, balconies, and external applications.', badges: ['System Product'], externalLink: 'http://www.melbacrylic.com.au/wpm440', imagePath: '/images/products/mac-wpm440.webp' },
 ]
 
 // =============================================================================
