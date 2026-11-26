@@ -7,9 +7,9 @@ import { medium, thumb } from '@/lib/utils'
 const CATS = [
   { label: 'Foam Panels', image: '/images/villawood-foam-racking.webp', href: '/products?category=Foam' },
   { label: 'Render Systems', image: '/images/villawood-render-pallets.webp', href: '/products?category=Render' },
-  { label: 'Texture Coatings', image: '/images/7fd79032-3cfc-4476-b6c3-bd837ad8c159.webp', href: '/products?category=Texture' },
+  { label: 'Texture Coatings', image: '/images/villawood-paint-buckets.webp', href: '/products?category=Texture' },
   { label: 'Mouldings', image: '/images/edges.webp', href: '/products?category=Mouldings' },
-  { label: 'Paint', image: '/images/BBC5B34C-D7A2-4F57-908E-DA4DA477DD11.webp', href: '/products?category=Paint' },
+  { label: 'Paint', image: '/images/villawood-paint-astec.webp', href: '/products?category=Paint' },
   { label: 'Tiling', image: '/images/products/novatex-e-lite-white.webp', href: '/products?category=Tiling' },
   { label: 'Waterproofing', image: '/images/products/mac-wpm440.webp', href: '/products?category=Waterproofing' },
   { label: 'Angles', image: '/images/villawood-mesh-angles.webp', href: '/products?category=Angles' },

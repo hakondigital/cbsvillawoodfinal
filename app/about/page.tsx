@@ -191,15 +191,15 @@ export default function AboutPage() {
               },
               {
                 name: 'Euromix', logo: '/images/Euromix.webp', logoBg: '',
-                desc: 'Australian-made cement and acrylic renders. Multi-purpose base coats, single-coat systems, full polymer renders for EPS, lightweight high build, cream render, skim coat, and keycoat.',
+                desc: 'Euromix specialises in premium rendering and architectural coating solutions designed for the Australian building industry. Its extensive range includes polymer-modified cement renders, acrylic texture coatings, patching compounds, primers and decorative finishes. With purpose-developed systems for a wide variety of substrates, Euromix delivers versatility, durability and professional finish quality.',
               },
               {
                 name: 'Novatex', logo: '/images/FINALLOGONOVATEX.webp', logoBg: 'bg-[#0a0a18]',
-                desc: '70+ years in the Australian building industry. EZ101 and ER100 render lines, SPR Acrylic smooth polymer, Valencia and Saturn texture coatings, and the Ezytex skim range.',
+                desc: 'NOVATEX delivers Australian-made rendering and coating solutions designed for quality, durability and performance. Its comprehensive range caters to a variety of rendering and surface finishing applications. We proudly stock NOVATEX products to help professionals achieve exceptional results on every project.',
               },
               {
                 name: 'MAC Render', logo: '/images/mac-render-logo.webp', logoBg: '',
-                desc: 'Specialist cement and acrylic renders with a 7-year manufacturer\u2019s warranty. Macrender HBS for EPS, Coarse FR for AAC, general purpose, and Supaskim finishing render.',
+                desc: 'For more than 30 years, MAC has specialised in advanced cement and acrylic rendering solutions designed to deliver outstanding performance, workability and finish quality. MAC\'s comprehensive range includes purpose-developed systems for EPS. With a range of renders, acrylic textured finishes, membranes, primers and concrete finishes, MAC will have your project covered.',
               },
               {
                 name: 'Unitex', logo: '/images/unitex-logo.svg', logoBg: '',
