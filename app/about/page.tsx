@@ -127,7 +127,9 @@ export default function AboutPage() {
               {
                 title: 'Architectural Mouldings',
                 desc: 'ACE foam mouldings for rendered fa\u00e7ades \u2014 window surrounds, cornices, columns, pilasters, band courses, and architraves. Custom profiles to order.',
-                image: '/images/ae359aba-d3d6-4e65-a119-cae00fdff431.webp',
+                // Two photos side by side, supplied by the client for this card (26 Nov 2026)
+                image: '/images/villawood-moulding-stock.webp',
+                image2: '/images/villawood-moulding-profile.webp',
               },
               {
                 title: 'Paint & Primers',
@@ -146,8 +148,15 @@ export default function AboutPage() {
               },
             ].map((item) => (
               <div key={item.title}>
-                <div className="relative overflow-hidden mb-4" style={{ height: 200 }}>
-                  <Image src={item.image} alt={item.title} fill className="object-cover" sizes="33vw" />
+                <div className="flex gap-1 overflow-hidden mb-4" style={{ height: 200 }}>
+                  <div className="relative flex-1 h-full overflow-hidden">
+                    <Image src={item.image} alt={item.title} fill className="object-cover" sizes="33vw" />
+                  </div>
+                  {'image2' in item && item.image2 && (
+                    <div className="relative flex-1 h-full overflow-hidden">
+                      <Image src={item.image2} alt={item.title} fill className="object-cover" sizes="17vw" />
+                    </div>
+                  )}
                 </div>
                 <h3 className="text-ink mb-2" style={{ fontSize: 20, fontWeight: 700 }}>{item.title}</h3>
                 <p className="text-body-text" style={{ fontSize: 15, lineHeight: 1.7 }}>{item.desc}</p>
