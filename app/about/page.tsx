@@ -134,7 +134,9 @@ export default function AboutPage() {
               {
                 title: 'Paint & Primers',
                 desc: 'Exterior acrylic paints and primers formulated for rendered surfaces. Trade quantities available, wide colour range stocked in-store.',
-                image: '/images/7fd79032-3cfc-4476-b6c3-bd837ad8c159.webp',
+                // Client's paint photo (26 Nov 2026): Unitex / MAC / Euromix buckets. Full width so all four buckets stay in frame;
+                // the Astec pair (villawood-paint-astec.webp) is converted and on hand if a second image is wanted.
+                image: '/images/villawood-paint-buckets.webp',
               },
               {
                 title: 'Rendering Tools',
