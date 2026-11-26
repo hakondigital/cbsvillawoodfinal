@@ -265,9 +265,9 @@ export default function AboutPage() {
       {/* Gallery */}
       <div className="grid grid-cols-2 lg:grid-cols-4" style={{ gap: 0 }}>
         {[
-          { src: '/images/villawood-macbond-additives.webp', l: 'MAC Render' },
+          { src: '/images/villawood-mac-pallets.webp', l: 'MAC Render' },
           { src: '/images/villawood-mesh-angles.webp', l: 'Mesh & Angles' },
-          { src: '/images/villawood-mesh-rack.webp', l: 'Render Mesh' },
+          { src: '/images/villawood-mesh-rack.webp', l: 'Sarking' },
           { src: '/images/ace-panels-installed.webp', l: 'ACE Panels On Site' },
         ].map((i) => (
           <div key={i.l} className="relative overflow-hidden" style={{ height: 240 }}>
