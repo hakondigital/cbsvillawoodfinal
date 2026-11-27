@@ -7,10 +7,10 @@ import Image from 'next/image'
 const BRANDS: { name: string; logo: string; bg: string; href: string; external?: boolean }[] = [
   { name: 'ACE Polystyrene', logo: '/images/ace-logo-orange.webp', bg: '', href: '/products?brand=ACE' },
   { name: 'ACE Mouldings', logo: '/images/ace-moulding-logo.webp', bg: '', href: '/products?category=Mouldings' },
-  { name: 'Euromix', logo: '/images/Euromix.webp', bg: '', href: '/products?brand=Euromix' },
-  { name: 'Novatex', logo: '/images/FINALLOGONOVATEX.webp', bg: '', href: '/products?brand=Novatex' },
   { name: 'MAC Render', logo: '/images/mac-render-logo.webp', bg: '', href: '/products?brand=MAC+Render' },
   { name: 'Unitex', logo: '/images/unitex-logo.svg', bg: '', href: '/products?brand=Unitex' },
+  { name: 'Novatex', logo: '/images/FINALLOGONOVATEX.webp', bg: '', href: '/products?brand=Novatex' },
+  { name: 'Euromix', logo: '/images/Euromix.webp', bg: '', href: '/products?brand=Euromix' },
   // White artwork — rendered on a dark tile
   { name: 'Builders Emporium', logo: '/images/builders-emporium-logo.svg', bg: 'bg-ink', href: '/products?brand=Builders+Emporium' },
   { name: 'Astec Wallmaster', logo: '/images/astec-wallmaster-logo.webp', bg: '', href: '/products?brand=Astec' },

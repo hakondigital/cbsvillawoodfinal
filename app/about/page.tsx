@@ -76,21 +76,16 @@ export default function AboutPage() {
               <h2 className="text-white mb-6">ACE Polystyrene &mdash; Factory-Direct Foam</h2>
               <div className="space-y-4" style={{ fontSize: 16, lineHeight: 1.8, color: 'rgba(245,242,238,0.6)' }}>
                 <p>
-                  ACE Polystyrene manufactures high-density graphite-infused
-                  EPS foam panels &mdash; the insulation and cladding substrate that professional
-                  renderers rely on for external wall insulation (EWI) and EIFS systems.
+                  ACE Polystyrene Products is a trusted Australian owned and operated manufacturer of high-quality expanded polystyrene (EPS) foam panels based in Arndell Park NSW.
                 </p>
                 <p>
-                  Their panels are CodeMark certified and BAL-29 fire rated, available in thicknesses
-                  from 10mm to 600mm and lengths up to 5000mm. Factory-direct pricing means
-                  custom sizing to your exact specification without the lead times or premium pricing
-                  you&rsquo;d get ordering through the supply chain.
+                  The Ace Polystyrene External Cladding System is CodeMark Certificated (BCA 2025 + BCA 2022 Amndt. 2).
                 </p>
                 <p>
-                  Beyond panels, ACE produces landscaping blocks, expanding PU foam,
-                  and a full range of architectural mouldings &mdash; window surrounds, cornices,
-                  columns, pilasters, band courses, and architraves. All supplied direct
-                  to our Villawood, Prestons and Canberra stores.
+                  Offering lightweight, versatile and cost-effective solutions for residential, commercial and industrial applications, available in SL, M and H grades.
+                </p>
+                <p>
+                  Manufacturing standard sheets, blocks and custom-made shapes to your exact specifications, helping reduce material waste, installation time and labour costs.
                 </p>
               </div>
               <a href="https://www.acepolystyrene.com.au/" target="_blank" rel="noopener noreferrer"
@@ -117,11 +112,11 @@ export default function AboutPage() {
               {
                 title: 'Foam Panels & Insulation',
                 desc: 'Graphite EPS panels in all thicknesses (10mm\u2013600mm), landscaping blocks, and expanding foam. Factory-direct from ACE Polystyrene.',
-                image: '/images/villawood-foam-racking.webp',
+                image: '/images/villawood-foam-stack-tall.webp',
               },
               {
                 title: 'Render Systems',
-                desc: 'Full render systems from Euromix, Novatex, MAC Render, and Unitex. Base coats, skim coats, polymer renders, texture coatings, primers, and admixtures.',
+                desc: 'Full render systems from MAC Render, Novatex, Unitex, and Euromix. Base coats, skim coats, polymer renders, texture coatings, primers, and admixtures.',
                 image: '/images/villawood-render-pallets.webp',
               },
               {
@@ -187,15 +182,7 @@ export default function AboutPage() {
             {[
               {
                 name: 'ACE Polystyrene', logo: '/images/ace-logo-orange.webp', logoBg: '',
-                desc: 'Graphite EPS foam panels, mouldings, and expanding foam \u2014 factory-direct pricing from ACE Polystyrene.',
-              },
-              {
-                name: 'Euromix', logo: '/images/Euromix.webp', logoBg: '',
-                desc: 'Euromix specialises in premium rendering and architectural coating solutions designed for the Australian building industry. Its extensive range includes polymer-modified cement renders, acrylic texture coatings, patching compounds, primers and decorative finishes. With purpose-developed systems for a wide variety of substrates, Euromix delivers versatility, durability and professional finish quality.',
-              },
-              {
-                name: 'Novatex', logo: '/images/FINALLOGONOVATEX.webp', logoBg: 'bg-[#0a0a18]',
-                desc: 'NOVATEX delivers Australian-made rendering and coating solutions designed for quality, durability and performance. Its comprehensive range caters to a variety of rendering and surface finishing applications. We proudly stock NOVATEX products to help professionals achieve exceptional results on every project.',
+                desc: 'ACE Polystyrene Products is a trusted Australian owned and operated manufacturer of high-quality expanded polystyrene (EPS) foam panels based in Arndell Park NSW. The Ace Polystyrene External Cladding System is CodeMark Certificated (BCA 2025 + BCA 2022 Amndt. 2). Offering lightweight, versatile and cost-effective solutions for residential, commercial and industrial applications, available in SL, M and H grades. Manufacturing standard sheets, blocks and custom-made shapes to your exact specifications, helping reduce material waste, installation time and labour costs.',
               },
               {
                 name: 'MAC Render', logo: '/images/mac-render-logo.webp', logoBg: '',
@@ -204,6 +191,14 @@ export default function AboutPage() {
               {
                 name: 'Unitex', logo: '/images/unitex-logo.svg', logoBg: '',
                 desc: 'Australian made since 1983. Base coat renders \u2014 including non-combustible and high-build options \u2014 plus trowel-on and roll-on textures, bagging finishes, and the Uni-Rock, Tanami, and Veneto decorative finishes.',
+              },
+              {
+                name: 'Novatex', logo: '/images/FINALLOGONOVATEX.webp', logoBg: 'bg-[#0a0a18]',
+                desc: 'NOVATEX delivers Australian-made rendering and coating solutions designed for quality, durability and performance. Its comprehensive range caters to a variety of rendering and surface finishing applications. We proudly stock NOVATEX products to help professionals achieve exceptional results on every project.',
+              },
+              {
+                name: 'Euromix', logo: '/images/Euromix.webp', logoBg: '',
+                desc: 'Euromix specialises in premium rendering and architectural coating solutions designed for the Australian building industry. Its extensive range includes polymer-modified cement renders, acrylic texture coatings, patching compounds, primers and decorative finishes. With purpose-developed systems for a wide variety of substrates, Euromix delivers versatility, durability and professional finish quality.',
               },
               {
                 name: 'Builders Emporium', logo: '/images/builders-emporium-logo.svg', logoBg: 'bg-[#0a0a18] px-1',
@@ -241,7 +236,7 @@ export default function AboutPage() {
               </p>
               <p>
                 <strong>Four render systems, one supplier.</strong> Instead of driving to four
-                different suppliers to compare Euromix, Novatex, MAC Render, and Unitex, you come to
+                different suppliers to compare MAC Render, Novatex, Unitex, and Euromix, you come to
                 CBS and spec the right system for your substrate and application. Our team can
                 walk you through the differences and recommend the best product for your job.
               </p>
@@ -265,11 +260,10 @@ export default function AboutPage() {
       {/* Gallery */}
       <div className="grid grid-cols-2 lg:grid-cols-4" style={{ gap: 0 }}>
         {[
+          { src: '/images/ace-panels-installed.webp', l: 'ACE Panels On Site' },
           { src: '/images/villawood-mac-pallets.webp', l: 'MAC Render' },
           { src: '/images/villawood-mesh-angles.webp', l: 'Mesh & Angles' },
-          { src: '/images/villawood-mesh-rack.webp', l: 'Sarking' },
-          { src: '/images/ace-panels-installed.webp', l: 'ACE Panels On Site' },
-        ].map((i) => (
+          { src: '/images/villawood-mesh-rack.webp', l: 'Sarking' },].map((i) => (
           <div key={i.l} className="relative overflow-hidden" style={{ height: 240 }}>
             <Image src={i.src} alt={i.l} fill className="object-cover" />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4">

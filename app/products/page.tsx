@@ -15,9 +15,9 @@ const BRAND_LOGOS: { src: string; alt: string; href: string; bg?: string; h?: nu
   { src: '/images/ace-logo-orange.webp', alt: 'ACE', href: '/products?brand=ACE', h: 38 },
   { src: '/images/ace-moulding-logo.webp', alt: 'ACE Mouldings', href: '/products?category=Mouldings', h: 44 },
   { src: '/images/mac-render-logo.webp', alt: 'MAC Render', href: '/products?brand=MAC+Render', h: 44 },
+  { src: '/images/unitex-logo.svg', alt: 'Unitex', href: '/products?brand=Unitex' },
   { src: '/images/FINALLOGONOVATEX.webp', alt: 'Novatex', href: '/products?brand=Novatex' },
   { src: '/images/Euromix.webp', alt: 'Euromix', href: '/products?brand=Euromix' },
-  { src: '/images/unitex-logo.svg', alt: 'Unitex', href: '/products?brand=Unitex' },
   // White artwork — needs a dark tile to be visible
   { src: '/images/builders-emporium-logo.svg', alt: 'Builders Emporium', href: '/products?brand=Builders+Emporium', bg: 'bg-ink px-1' },
   { src: '/images/astec-wallmaster-logo.webp', alt: 'Astec Wallmaster', href: '/products?brand=Astec' },

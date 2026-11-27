@@ -8,9 +8,9 @@ const LOGOS: { src: string; alt: string; dark?: boolean }[] = [
   { src: '/images/ace-logo-orange.webp', alt: 'ACE Polystyrene' },
   { src: '/images/ace-moulding-logo.webp', alt: 'ACE Mouldings' },
   { src: '/images/mac-render-logo.webp', alt: 'MAC Render' },
+  { src: '/images/unitex-logo.svg', alt: 'Unitex' },
   { src: '/images/FINALLOGONOVATEX.webp', alt: 'Novatex' },
   { src: '/images/Euromix.webp', alt: 'Euromix' },
-  { src: '/images/unitex-logo.svg', alt: 'Unitex' },
   // White artwork — shown on a dark tile
   { src: '/images/builders-emporium-logo.svg', alt: 'Builders Emporium', dark: true },
   { src: '/images/astec-wallmaster-logo.webp', alt: 'Astec Wallmaster' },

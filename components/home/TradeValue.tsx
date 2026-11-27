@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const POINTS = [
   { title: 'Factory-direct foam pricing', desc: 'ACE Polystyrene foam panels at factory-direct pricing. Full range of thicknesses, custom sizing available, no markup.' },
-  { title: 'Four render systems, one supplier', desc: 'Euromix, Novatex, MAC Render, and Unitex under one roof. Spec the right product for any substrate.' },
+  { title: 'Four render systems, one supplier', desc: 'MAC Render, Novatex, Unitex, and Euromix under one roof. Spec the right product for any substrate.' },
   { title: 'Open 6AM, stocked by the pallet', desc: 'Walk in early with a big order. We keep serious stock so your crew leaves with a full load.' },
   { title: 'Expert trade advice', desc: 'Our team knows rendering. We\u2019ll match you to the right system for your substrate and application.' },
 ]

@@ -10,7 +10,7 @@ import { medium, thumb, PRIMARY_STORE } from '@/lib/utils'
 
 const CATS: ProductCategory[] = ['Foam', 'Render', 'Texture', 'Mouldings', 'Paint', 'Tiling', 'Waterproofing', 'Angles', 'Mesh', 'Tools', 'Accessories']
 // Sidebar order — also the order brand groups appear in when a category is selected
-const BRAND_NAMES: ProductBrand[] = ['Novatex', 'MAC Render', 'Euromix', 'Unitex', 'ACE', 'Astec', 'Builders Emporium']
+const BRAND_NAMES: ProductBrand[] = ['ACE', 'MAC Render', 'Unitex', 'Novatex', 'Euromix', 'Builders Emporium', 'Astec']
 type Filter = 'All' | ProductCategory
 
 const normBrand = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, '')

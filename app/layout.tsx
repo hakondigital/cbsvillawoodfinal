@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: '%s | Central Building Supplies',
   },
   description:
-    'Western Sydney\'s trade supplier for renderers and builders. Factory-direct ACE polystyrene foam, Euromix, Novatex, MAC Render, and Unitex renders.',
+    'Western Sydney\'s trade supplier for renderers and builders. Factory-direct ACE polystyrene foam, MAC Render, Novatex, Unitex, and Euromix renders.',
   robots: { index: true, follow: true },
 }
 

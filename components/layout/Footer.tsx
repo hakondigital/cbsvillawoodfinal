@@ -8,9 +8,9 @@ const BRAND_LOGOS: { src: string; alt: string }[] = [
   { src: '/images/ace-logo-orange.webp', alt: 'ACE' },
   { src: '/images/ace-moulding-logo.webp', alt: 'ACE Mouldings' },
   { src: '/images/mac-render-logo.webp', alt: 'MAC Render' },
+  { src: '/images/unitex-logo.svg', alt: 'Unitex' },
   { src: '/images/FINALLOGONOVATEX.webp', alt: 'Novatex' },
   { src: '/images/Euromix.webp', alt: 'Euromix' },
-  { src: '/images/unitex-logo.svg', alt: 'Unitex' },
   { src: '/images/builders-emporium-logo.svg', alt: 'Builders Emporium' },
   { src: '/images/astec-wallmaster-logo.webp', alt: 'Astec Wallmaster' },
   { src: '/images/trademark-wholesale-logo.webp', alt: 'TradeMark' },
@@ -46,7 +46,7 @@ export default function Footer() {
               </div>
             </Link>
             <p style={{ fontSize: 13, lineHeight: 2 }}>
-              Factory-direct ACE polystyrene, Euromix, Novatex, MAC Render, and Unitex render systems. Trade locations in Villawood, Prestons and Canberra.
+              Factory-direct ACE polystyrene, MAC Render, Novatex, Unitex, and Euromix render systems. Trade locations in Villawood, Prestons and Canberra.
             </p>
             {/* TODO(client): Villawood socials. The Prestons Facebook/TikTok links were dropped; this Instagram is the company account. */}
             <div className="flex items-center gap-3 mt-3">
