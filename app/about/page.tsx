@@ -140,8 +140,14 @@ export default function AboutPage() {
               },
               {
                 title: 'Accessories & Fixings',
-                desc: 'Fibreglass render mesh, panel fixings, mushroom washers, bond admixtures, sarking, sealants, and everything else for a compliant installation.',
+                desc: 'Fibreglass render mesh, panel fixings, mushroom washers, bond admixtures, sealants, and everything else for a compliant installation.',
                 image: '/images/villawood-fixings-shelving.webp',
+              },
+              {
+                title: 'Sarking',
+                // TODO(client): confirm the sarking grades/brands wording (photo shows the TradeSelect rack).
+                desc: 'Roof and wall sarking stocked by the roll — reflective foil, vapour-permeable wall wrap, and extra R-value and fire-rated grades from the TradeSelect range.',
+                image: '/images/villawood-sarking-rack.webp',
               },
             ].map((item) => (
               <div key={item.title}>
