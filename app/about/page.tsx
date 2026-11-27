@@ -140,8 +140,13 @@ export default function AboutPage() {
               },
               {
                 title: 'Accessories & Fixings',
-                desc: 'Fibreglass render mesh, panel fixings, mushroom washers, bond admixtures, sealants, and everything else for a compliant installation.',
+                desc: 'Panel fixings, mushroom washers, bond admixtures, sealants, and everything else for a compliant installation.',
                 image: '/images/villawood-fixings-shelving.webp',
+              },
+              {
+                title: 'Render Mesh',
+                desc: 'Alkali-resistant fibreglass render mesh in standard and heavy-duty grades, self-adhesive mesh tape, and expanded metal mesh — stocked by the roll from Builders Emporium, ACE Polystyrene and iQuip.',
+                image: '/images/villawood-mesh-rolls.webp',
               },
               {
                 title: 'Sarking',
